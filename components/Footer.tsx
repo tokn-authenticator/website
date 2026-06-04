@@ -89,6 +89,9 @@ export function Footer() {
             <Link href="/privacy" className="text-muted transition hover:text-text">
               Privacy
             </Link>
+            <Link href="/imprint" className="text-muted transition hover:text-text">
+              Imprint
+            </Link>
             <a
               href={site.links.license}
               target="_blank"
