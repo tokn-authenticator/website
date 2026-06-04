@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tokn-website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tokn-website
+  template:
+    metadata:
+      labels:
+        app: tokn-website
+    spec:
+      containers:
+      - name: tokn-website
+        image: ghcr.io/tokn-authenticator/website
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 200m
+            memory: 384Mi
+          requests:
+            cpu: 100m
+            memory: 256Mi
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 15
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 10
+          periodSeconds: 10

@@ -1,0 +1,16 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: tokn-website-image-updater
+  namespace: tokn
+spec:
+  namespace: argocd
+  writeBackConfig:
+    method: argocd
+  applicationRefs:
+    - namePattern: tokn-website
+      images:
+        - alias: tokn-website
+          imageName: ghcr.io/tokn-authenticator/website:latest
+          commonUpdateSettings:
+            updateStrategy: digest

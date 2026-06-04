@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tokn-website
+  namespace: tokn
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: tokn-website=ghcr.io/tokn-authenticator/website
+    argocd-image-updater.argoproj.io/tokn-website.update-strategy: digest
+    argocd-image-updater.argoproj.io/write-back-method: argocd
+spec:
+  project: tokn
+  source:
+    repoURL: 'https://github.com/tokn-authenticator/website.git'
+    targetRevision: main
+    path: k8s/overlays/production
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: tokn
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

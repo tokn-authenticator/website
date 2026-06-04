@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tokn-website
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-dns
+    external-dns.alpha.kubernetes.io/target: lb-fsn-1.diamondforge.me
+spec:
+  ingressClassName: traefik
+  tls:
+  - hosts:
+    - usetokn.app
+    secretName: tokn-website-tls
+  rules:
+  - host: usetokn.app
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: tokn-website
+            port:
+              number: 80
