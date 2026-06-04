@@ -142,9 +142,7 @@ export const worksWith: string[] = [
   "siReddit",
   "siTwitch",
   "siDropbox",
-  "siPaypal",
   "siCloudflare",
   "siProton",
-  "siSteam",
   "siNotion",
 ];

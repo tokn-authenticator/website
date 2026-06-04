@@ -99,6 +99,11 @@ export function Footer() {
             </a>
           </div>
         </div>
+
+        <p className="mt-6 text-xs leading-relaxed text-muted">
+          All product names, logos and brands are property of their respective owners. References to
+          other apps and services are nominative and do not imply any affiliation or endorsement.
+        </p>
       </div>
     </footer>
   );

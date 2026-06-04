@@ -1,14 +1,14 @@
-import * as simpleIcons from "simple-icons";
-import { worksWith, importSources } from "@/lib/site";
-import { BrandGlyph } from "./BrandGlyph";
+// import * as simpleIcons from "simple-icons";
+import { importSources } from "@/lib/site";
+// import { BrandGlyph } from "./BrandGlyph";
 import { Screenshot } from "./Screenshot";
 import { Import } from "lucide-react";
 
-type SimpleIcon = { title: string; path: string };
+// type SimpleIcon = { title: string; path: string };
 
-const brands = worksWith
-  .map((k) => (simpleIcons as Record<string, SimpleIcon>)[k])
-  .filter(Boolean);
+// const brands = worksWith
+//   .map((k) => (simpleIcons as Record<string, SimpleIcon>)[k])
+//   .filter(Boolean);
 
 export function Switching() {
   return (
@@ -59,19 +59,21 @@ export function Switching() {
         <p className="text-center text-sm text-muted">
           Works with any service that supports standard TOTP or HOTP two-factor authentication
         </p>
-        <div className="mx-auto mt-6 grid max-w-3xl grid-cols-4 gap-3 sm:grid-cols-6">
+        {/* Company logos commented out
+        <div className="mx-auto mt-6 flex max-w-3xl flex-wrap justify-center gap-3">
           {brands.map((b) => (
             <div
               key={b.title}
               role="img"
               aria-label={b.title}
               title={b.title}
-              className="flex items-center justify-center rounded-2xl border border-border bg-surface p-4 text-muted transition hover:text-text"
+              className="flex w-[calc((100%-2.25rem)/4)] items-center justify-center rounded-2xl border border-border bg-surface p-4 text-muted transition hover:text-text sm:w-[calc((100%-3.75rem)/6)]"
             >
               <BrandGlyph icon={b} className="h-6 w-6" />
             </div>
           ))}
         </div>
+        */}
       </div>
     </section>
   );
