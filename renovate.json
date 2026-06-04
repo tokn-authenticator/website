@@ -1,0 +1,50 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "baseBranchPatterns": [
+    "main"
+  ],
+  "labels": [
+    "dependencies",
+    "renovate"
+  ],
+  "dependencyDashboard": true,
+  "enabledManagers": [
+    "npm"
+  ],
+  "rebaseWhen": "conflicted",
+  "automerge": false,
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 0,
+  "packageRules": [
+    {
+      "description": "Catch-all for minor/patch updates on stable (>= 1.0.0) packages. Specific rules below override this.",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "matchCurrentVersion": "!/^0\\./",
+      "groupName": "Miscellaneous Updates"
+    },
+    {
+      "groupName": "Next.js & React",
+      "matchPackageNames": [
+        "/^next$/",
+        "/^@next\\//",
+        "/^eslint-config-next$/",
+        "/^react$/",
+        "/^react-dom$/",
+        "/^@types\\/react/"
+      ]
+    },
+    {
+      "groupName": "Tailwind CSS",
+      "matchPackageNames": [
+        "/^tailwindcss$/",
+        "/^@tailwindcss\\//"
+      ]
+    }
+  ]
+}
