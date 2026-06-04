@@ -8,7 +8,7 @@ spec:
   writeBackConfig:
     method: argocd
   applicationRefs:
-    - namePattern: tokn-website
+    - namePattern: tokn-homepage
       images:
         - alias: tokn-website
           imageName: ghcr.io/tokn-authenticator/website:latest
