@@ -1,13 +1,14 @@
 import { ChevronDown } from "lucide-react";
 import { Fragment } from "react";
 import { faqs } from "@/lib/site";
+import { RevealEmail } from "@/components/RevealEmail";
 
 const linkClass = "font-medium text-primary underline-offset-4 hover:underline";
 
 const tokenRe =
   /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}|(?:https?:\/\/)?(?:www\.)?[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}(?:\/\S*)?)/g;
 
-function renderAnswer(text: string) {
+function renderTokens(text: string) {
   return text.split(tokenRe).map((part, i) => {
     if (i % 2 === 0) return part;
 
@@ -34,6 +35,16 @@ function renderAnswer(text: string) {
       </Fragment>
     );
   });
+}
+
+
+function renderAnswer(text: string) {
+  return text.split("{{email}}").map((seg, si, arr) => (
+    <Fragment key={si}>
+      {renderTokens(seg)}
+      {si < arr.length - 1 && <RevealEmail className={linkClass} />}
+    </Fragment>
+  ));
 }
 
 export function Faq() {

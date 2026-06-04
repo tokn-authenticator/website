@@ -12,7 +12,6 @@ export const site = {
     releases: "https://github.com/fthomys/tokn/releases",
     issues: "https://github.com/fthomys/tokn/issues",
     license: "https://github.com/fthomys/tokn/blob/main/LICENSE",
-    email: "mailto:contact@diamondforge.me",
   },
 };
 
@@ -129,7 +128,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Where can I report a bug?",
-    a: "Open an issue on the GitHub issue tracker at github.com/fthomys/tokn/issues. Include your Android version, how to reproduce it, and what you expected to happen. If you would rather not use GitHub, email contact@diamondforge.me instead.",
+    a: "Open an issue on the GitHub issue tracker at github.com/fthomys/tokn/issues. Include your Android version, how to reproduce it, and what you expected to happen. If you would rather not use GitHub, email us instead: {{email}}",
   },
 ];
 

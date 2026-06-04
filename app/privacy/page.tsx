@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { BrandMark } from "@/components/BrandMark";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
+import { RevealEmail } from "@/components/RevealEmail";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -15,7 +16,6 @@ export const metadata: Metadata = {
 const h2 = "font-display text-2xl font-semibold tracking-tight mt-12";
 const p = "mt-4 text-pretty leading-relaxed text-muted";
 const li = "leading-relaxed text-muted";
-const mail = "contact@diamondforge.me";
 const link = "font-medium text-primary underline-offset-4 hover:underline";
 
 export default function Privacy() {
@@ -131,9 +131,7 @@ export default function Privacy() {
         <p className={p}>
           If you have reason to believe that a child has provided personally identifiable
           information to the Service Provider through the Application, please contact us at{" "}
-          <a href={site.links.email} className={link}>
-            {mail}
-          </a>{" "}
+          <RevealEmail className={link} />{" "}
           so we can take the necessary action. You must also be at least 16 years of age to consent
           to the processing of your personally identifiable information in your country (in some
           countries we may allow your parent or guardian to do so on your behalf).
@@ -162,9 +160,7 @@ export default function Privacy() {
         <h2 className={h2}>Contact</h2>
         <p className={p}>
           If you have any questions about privacy or these practices, email us at{" "}
-          <a href={site.links.email} className={link}>
-            {mail}
-          </a>
+          <RevealEmail className={link} />
           . For bugs or feature requests, open an issue on{" "}
           <a href={site.links.issues} target="_blank" rel="noreferrer" className={link}>
             GitHub
