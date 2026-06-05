@@ -19,7 +19,7 @@ export function Switching() {
             <Import className="h-4 w-4" /> Switching over
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold sm:text-4xl">
-            Coming from Aegis, Authy, or Ente Auth?
+            Coming from Aegis, Stratum, Authy, or Ente Auth?
           </h2>
           <p className="mt-4 max-w-md text-pretty text-lg text-muted">
             Tokn is a free, open-source authenticator in the same spirit as Aegis and Ente Auth, and

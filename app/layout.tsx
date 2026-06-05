@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     "privacy",
     "Aegis alternative",
     "Ente Auth alternative",
+    "Stratum alternative",
     "Authy alternative",
     "Google Authenticator alternative",
     "Microsoft Authenticator alternative",

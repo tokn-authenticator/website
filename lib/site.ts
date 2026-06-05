@@ -72,7 +72,7 @@ export const features: Feature[] = [
   },
   {
     title: "Import from anywhere",
-    text: "Bring accounts over from Aegis, 2FAS, Google Authenticator, or any otpauth URI.",
+    text: "Bring accounts over from Aegis, 2FAS, Stratum, Google Authenticator, or any otpauth URI.",
     icon: "download",
     shot: { src: "/screens/import-source-picker.png", alt: "Picking an import source" },
   },
@@ -95,6 +95,7 @@ export type ImportSource = { name: string; note: string };
 export const importSources: ImportSource[] = [
   { name: "Aegis", note: "Encrypted backups" },
   { name: "2FAS", note: "Backups" },
+  { name: "Stratum", note: "Backups" },
   { name: "Google Authenticator", note: "Export QR codes" },
   { name: "otpauth:// URIs", note: "Any standard token" },
 ];
@@ -112,7 +113,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "I am switching from another app. Will my accounts come over?",
-    a: "Yes. Tokn imports from Aegis, 2FAS, Google Authenticator, and standard otpauth:// URIs. Load an encrypted backup or export from one of those apps, scan a QR code with the camera, pick a QR image from your gallery, or type a secret in by hand.",
+    a: "Yes. Tokn imports from Aegis, 2FAS, Stratum, Google Authenticator, and standard otpauth:// URIs. Load an encrypted backup or export from one of those apps, scan a QR code with the camera, pick a QR image from your gallery, or type a secret in by hand.",
   },
   {
     q: "How do I move to a new phone?",
