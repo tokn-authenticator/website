@@ -11,6 +11,7 @@ const columns = [
       { label: "Features", href: "#features", external: false },
       { label: "Security", href: "#security", external: false },
       { label: "Sync", href: "#sync", external: false },
+      { label: "Compare", href: "#compare", external: false },
       { label: "FAQ", href: "#faq", external: false },
     ],
   },

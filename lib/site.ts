@@ -134,6 +134,133 @@ export const faqs: Faq[] = [
 ];
 
 
+export type Cell = "yes" | "no" | "partial";
+
+export type ComparisonRow = {
+  feature: string;
+  note?: string;
+  tokn: Cell;
+  aegis: Cell;
+  googleAuth: Cell;
+  twofas: Cell;
+  stratum: Cell;
+  authy: Cell;
+};
+
+export const comparisonApps = ["Tokn", "Aegis", "Google Auth", "2FAS", "Stratum", "Authy"] as const;
+
+export const comparison: ComparisonRow[] = [
+  {
+    feature: "Open source",
+    tokn: "yes",
+    aegis: "yes",
+    googleAuth: "no",
+    twofas: "yes",
+    stratum: "yes",
+    authy: "no",
+  },
+  {
+    feature: "No secrets in the cloud",
+    note: "No account sync of your tokens",
+    tokn: "yes",
+    aegis: "yes",
+    googleAuth: "partial",
+    twofas: "partial",
+    stratum: "yes",
+    authy: "no",
+  },
+  {
+    feature: "Encrypted vault at rest",
+    note: "Encrypted on disk with a key only you can unlock",
+    tokn: "yes",
+    aegis: "yes",
+    googleAuth: "partial",
+    twofas: "yes",
+    stratum: "yes",
+    authy: "partial",
+  },
+  {
+    feature: "Biometric / app lock",
+    note: "Gate access with a fingerprint or PIN",
+    tokn: "yes",
+    aegis: "yes",
+    googleAuth: "yes",
+    twofas: "yes",
+    stratum: "yes",
+    authy: "yes",
+  },
+  {
+    feature: "No Google Play Services",
+    note: "Runs on de-Googled phones, on F-Droid",
+    tokn: "yes",
+    aegis: "yes",
+    googleAuth: "no",
+    twofas: "partial",
+    stratum: "yes",
+    authy: "no",
+  },
+  {
+    feature: "Local network sync",
+    note: "Move accounts over Wi-Fi, Wi-Fi Direct or an animated QR code",
+    tokn: "yes",
+    aegis: "no",
+    googleAuth: "no",
+    twofas: "no",
+    stratum: "no",
+    authy: "no",
+  },
+  {
+    feature: "Self-controlled backups",
+    note: "Export an encrypted copy you own",
+    tokn: "yes",
+    aegis: "yes",
+    googleAuth: "no",
+    twofas: "yes",
+    stratum: "yes",
+    authy: "no",
+  },
+  {
+    feature: "Import from other apps",
+    note: "Bring tokens over from other authenticators",
+    tokn: "yes",
+    aegis: "yes",
+    googleAuth: "no",
+    twofas: "yes",
+    stratum: "yes",
+    authy: "no",
+  },
+  {
+    feature: "Custom icons & icon packs",
+    note: "Pick your own images, or import Aegis-style packs",
+    tokn: "yes",
+    aegis: "yes",
+    googleAuth: "no",
+    twofas: "yes",
+    stratum: "yes",
+    authy: "partial",
+  },
+  {
+    feature: "Organize with groups",
+    note: "Sort into custom groups, more than one per account",
+    tokn: "yes",
+    aegis: "yes",
+    googleAuth: "no",
+    twofas: "yes",
+    stratum: "yes",
+    authy: "no",
+  },
+  {
+    feature: "Material You theming",
+    note: "Dynamic color, light / dark / system",
+    tokn: "yes",
+    aegis: "yes",
+    googleAuth: "yes",
+    twofas: "partial",
+    stratum: "partial",
+    authy: "no",
+  },
+];
+
 export const worksWith: string[] = [
   "siGoogle",
   "siGithub",

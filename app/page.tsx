@@ -5,6 +5,7 @@ import { Features } from "@/components/Features";
 import { Security } from "@/components/Security";
 import { Sync } from "@/components/Sync";
 import { Switching } from "@/components/Switching";
+import { Comparison } from "@/components/Comparison";
 import { Faq } from "@/components/Faq";
 import { CtaBand } from "@/components/CtaBand";
 import { Footer } from "@/components/Footer";
@@ -52,6 +53,7 @@ export default function Home() {
         <Security />
         <Sync />
         <Switching />
+        <Comparison />
         <Faq />
         <CtaBand />
       </main>
