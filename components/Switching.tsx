@@ -23,9 +23,9 @@ export function Switching() {
           </h2>
           <p className="mt-4 max-w-md text-pretty text-lg text-muted">
             Tokn is a free, open-source authenticator in the same spirit as Aegis and Ente Auth, and
-            a fully offline alternative to cloud apps like Authy and Google Authenticator. It reads
-            the export formats you already use, so you are not re-adding every account by hand. Keep
-            an encrypted backup while you are at it.
+            a fully offline alternative to cloud apps like Authy and Google Authenticator. Wherever
+            your old app lets you export, Tokn reads the format directly, so you are not re-adding
+            every account by hand. Keep an encrypted backup while you are at it.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-2.5">
