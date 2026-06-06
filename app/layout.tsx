@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     "Microsoft Authenticator alternative",
     "open source authenticator",
   ],
-  authors: [{ name: "DiamondForgeLabs" }],
+  authors: [{ name: "DiamondForge Labs", url: site.links.github }],
+  creator: "DiamondForge Labs",
+  publisher: "DiamondForge Labs",
+  category: "security",
+  formatDetection: { telephone: false, email: false, address: false },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -39,7 +43,15 @@ export const metadata: Metadata = {
     title: "Tokn - your 2FA codes, offline",
     description: site.description,
     siteName: "Tokn",
-    images: [{ url: "/feature-graphic.png", width: 1024, height: 500, alt: "Tokn" }],
+    locale: "en_US",
+    images: [
+      {
+        url: "/feature-graphic.png",
+        width: 1024,
+        height: 500,
+        alt: "Tokn - free, open-source offline 2FA authenticator for Android",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

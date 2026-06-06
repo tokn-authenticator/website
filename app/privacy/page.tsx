@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Privacy",
   description:
     "Tokn is built so there is nothing to collect. No accounts, no analytics, no tracking, on the app or this website.",
+  alternates: { canonical: "/privacy" },
 };
 
 const h2 = "font-display text-2xl font-semibold tracking-tight mt-12";
