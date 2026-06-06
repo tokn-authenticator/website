@@ -1,13 +1,15 @@
 import type { MetadataRoute } from "next";
-import { site } from "@/lib/site";
+import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
 export const dynamic = "force-static";
 
-export default function manifest(): MetadataRoute.Manifest {
+export default async function manifest(): Promise<MetadataRoute.Manifest> {
+  const t = await getTranslations({ locale: routing.defaultLocale, namespace: "Meta" });
   return {
-    name: "Tokn - your 2FA codes, offline",
+    name: t("title"),
     short_name: "Tokn",
-    description: site.description,
+    description: t("description"),
     start_url: "/",
     display: "standalone",
     background_color: "#0c0c11",

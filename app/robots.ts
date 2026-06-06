@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/imprint"],
+      disallow: ["/imprint", "/de/imprint"],
     },
     sitemap: `${site.url}/sitemap.xml`,
   };

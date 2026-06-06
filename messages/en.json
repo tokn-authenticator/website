@@ -1,0 +1,295 @@
+{
+  "Meta": {
+    "siteName": "Tokn",
+    "tagline": "Your 2FA codes. Offline.",
+    "title": "Tokn - your 2FA codes, offline",
+    "description": "Tokn is a free, open-source 2FA authenticator for Android. Your one-time codes stay on your device, encrypted. No accounts, no cloud, no analytics.",
+    "ogImageAlt": "Tokn - free, open-source offline 2FA authenticator for Android",
+    "privacyTitle": "Privacy",
+    "privacyDescription": "Tokn collects nothing. No accounts, no telemetry in the app. The website uses privacy-friendly, self-hosted, cookieless analytics.",
+    "imprintTitle": "Imprint",
+    "imprintDescription": "Legal information and contact details for Tokn."
+  },
+  "Nav": {
+    "home": "Tokn home",
+    "features": "Features",
+    "security": "Security",
+    "sync": "Sync",
+    "compare": "Compare",
+    "faq": "FAQ",
+    "getTokn": "Get Tokn",
+    "toggleMenu": "Toggle menu",
+    "language": "Language",
+    "english": "English",
+    "german": "Deutsch"
+  },
+  "Hero": {
+    "badge": "Open source, GPL-3.0",
+    "titleLine1": "Your 2FA codes.",
+    "titleLine2": "Offline.",
+    "lead": "Tokn is a free, open-source authenticator for Android. Your one-time codes stay on your device, encrypted. No account, no cloud, no analytics.",
+    "subnote": "No account stands between you and your codes, and they're generated offline.",
+    "screenshotAlt": "Tokn vault on Android"
+  },
+  "Principles": {
+    "privacy": {
+      "title": "Private by design",
+      "text": "No sign-up, zero telemetry, and no Google Play Services on your device."
+    },
+    "vault": {
+      "title": "Encrypted vault",
+      "text": "Stored in an SQLCipher database, unlocked with biometrics or a password."
+    },
+    "offline": {
+      "title": "Fully offline",
+      "text": "Codes are generated locally on your phone. Nothing is sent anywhere."
+    },
+    "oss": {
+      "title": "Open source",
+      "text": "GPL-3.0, source on GitHub, and published on F-Droid."
+    }
+  },
+  "Features": {
+    "eyebrow": "Features",
+    "heading": "Everything you need, nothing that phones home",
+    "lead": "A polished Material 3 vault with the controls you would expect, and a few that other authenticators leave out.",
+    "screenshotAlt": "Tokn vault with grouped accounts and live codes",
+    "vault": {
+      "title": "Encrypted vault",
+      "text": "Your tokens live in an SQLCipher database. Unlock with a fingerprint, your face, or a password.",
+      "alt": "Security settings with vault encryption and biometrics enabled"
+    },
+    "sync": {
+      "title": "Device-to-device sync",
+      "text": "Move accounts to a new phone over local Wi-Fi, Wi-Fi Direct, or an animated QR code. The handshake is end-to-end encrypted and never leaves your network.",
+      "alt": "Choosing a sync method: Wi-Fi, Wi-Fi Direct, or QR code"
+    },
+    "backup": {
+      "title": "Backup and restore",
+      "text": "Encrypted backups for migrating phones or just keeping a copy you control.",
+      "alt": "Backup and restore screen"
+    },
+    "import": {
+      "title": "Import from anywhere",
+      "text": "Bring accounts over from Aegis, 2FAS, Stratum, Google Authenticator, or any otpauth URI.",
+      "alt": "Picking an import source"
+    },
+    "groups": {
+      "title": "Organize with groups",
+      "text": "Sort accounts into custom groups, more than one per account, and order the list your way.",
+      "alt": "Vault home with grouped accounts and live codes"
+    },
+    "material": {
+      "title": "Material You",
+      "text": "Material 3 design with light, dark, or system themes and optional dynamic color.",
+      "alt": "Appearance settings with theme options"
+    }
+  },
+  "Security": {
+    "eyebrow": "Security",
+    "heading": "Locked down by default",
+    "lead": "Most authenticators hand over your tokens the moment you open them. Tokn keeps them sealed until you prove it is you.",
+    "altDisabled": "Security settings with the vault unencrypted",
+    "altEnabled": "Security settings with vault encryption and biometrics enabled",
+    "rest": {
+      "title": "Encrypted at rest",
+      "text": "Tokens live in an SQLCipher database. Without your key, the vault is just noise."
+    },
+    "unlock": {
+      "title": "Biometric or password unlock",
+      "text": "Open the vault with a fingerprint or your face, with a password as the fallback."
+    },
+    "screenshot": {
+      "title": "Screenshot protection",
+      "text": "Optionally keep codes out of the recents preview and block screen capture."
+    },
+    "standards": {
+      "title": "Standards based",
+      "text": "TOTP and HOTP per RFC 6238 and RFC 4226, with SHA-1, SHA-256 and SHA-512."
+    }
+  },
+  "Sync": {
+    "eyebrow": "Sync",
+    "heading": "Move to a new phone without a server",
+    "lead": "No cloud account is involved. Pick how the two devices talk, scan to pair, and your accounts come across. The handshake is end-to-end encrypted and nothing leaves the local network.",
+    "altSendReceive": "Choosing to send or receive accounts",
+    "altMethods": "Choosing a sync method",
+    "wifi": {
+      "title": "Local Wi-Fi",
+      "text": "Both phones on the same network pair and transfer directly."
+    },
+    "wifidirect": {
+      "title": "Wi-Fi Direct",
+      "text": "No shared network needed. The devices connect to each other."
+    },
+    "qr": {
+      "title": "Animated QR",
+      "text": "Fully offline. An animated QR carries the encrypted payload across."
+    }
+  },
+  "Switching": {
+    "eyebrow": "Switching over",
+    "heading": "Coming from Aegis, Stratum, Authy, or Ente Auth?",
+    "lead": "Tokn is a free, open-source authenticator in the same spirit as Aegis and Ente Auth, and a fully offline alternative to cloud apps like Authy and Google Authenticator. Wherever your old app lets you export, Tokn reads the format directly, so you are not re-adding every account by hand. Keep an encrypted backup while you are at it.",
+    "worksWith": "Works with any service that supports standard TOTP or HOTP two-factor authentication",
+    "altPicker": "Picking an import source",
+    "altBackup": "Encrypted backup and restore",
+    "sources": {
+      "aegis": "Encrypted backups",
+      "twofas": "Backups",
+      "stratum": "Backups",
+      "googleAuth": "Export QR codes",
+      "otpauth": "Any standard token"
+    }
+  },
+  "Comparison": {
+    "eyebrow": "How it compares",
+    "heading": "Tokn next to the apps people switch from",
+    "lead": "The honest version. Aegis is a close cousin and 2FAS is solid too. Where Tokn pulls ahead is moving accounts to a new phone with no server in the middle.",
+    "caption": "Feature comparison of Tokn versus Aegis, Google Authenticator, 2FAS, Stratum and Authy",
+    "yes": "Yes",
+    "partial": "Partial",
+    "no": "No",
+    "legendYes": "Yes",
+    "legendPartial": "Partial or optional",
+    "legendNo": "No",
+    "summary": "Compared with Google Authenticator and Authy, Tokn is open source, keeps your tokens off the cloud, and lets you export an encrypted backup you control instead of locking you into an account. Aegis, Stratum and 2FAS share most of that privacy-first foundation. What sets Tokn apart is moving your accounts to a new phone with no server in the middle, over the local Wi-Fi network, Wi-Fi Direct, or an animated QR code.",
+    "rows": {
+      "oss": { "feature": "Open source" },
+      "noCloud": { "feature": "No secrets in the cloud", "note": "No account sync of your tokens" },
+      "encryptedVault": { "feature": "Encrypted vault at rest", "note": "Encrypted on disk with a key only you can unlock" },
+      "biometric": { "feature": "Biometric / app lock", "note": "Gate access with a fingerprint or PIN" },
+      "noGms": { "feature": "No Google Play Services", "note": "Runs on de-Googled phones, on F-Droid" },
+      "localSync": { "feature": "Local network sync", "note": "Move accounts over Wi-Fi, Wi-Fi Direct or an animated QR code" },
+      "backups": { "feature": "Self-controlled backups", "note": "Export an encrypted copy you own" },
+      "import": { "feature": "Import from other apps", "note": "Bring tokens over from other authenticators" },
+      "customIcons": { "feature": "Custom icons & icon packs", "note": "Pick your own images, or import Aegis-style packs" },
+      "groups": { "feature": "Organize with groups", "note": "Sort into custom groups, more than one per account" },
+      "materialYou": { "feature": "Material You theming", "note": "Dynamic color, light / dark / system" }
+    }
+  },
+  "Faq": {
+    "eyebrow": "FAQ",
+    "heading": "Questions, answered",
+    "difference": {
+      "q": "How is Tokn different from Google Authenticator or Aegis?",
+      "a": "Against Google Authenticator the gap is wide: your codes sit in an encrypted vault behind biometrics or a password instead of being on screen the second you open the app, it is open source, runs without Google Play Services, and you can export, back up, and move your accounts yourself. Aegis is a close cousin, also open source, encrypted, and offline. What Tokn adds is moving accounts to a new phone without a server, over local Wi-Fi, Wi-Fi Direct, or an animated QR code."
+    },
+    "storage": {
+      "q": "Where are my codes stored?",
+      "a": "Only on your device, inside an SQLCipher-encrypted database. There is no account and no server. Codes are generated locally per RFC 6238 (TOTP) and RFC 4226 (HOTP), with SHA-1, SHA-256, and SHA-512 support."
+    },
+    "importing": {
+      "q": "I am switching from another app. Will my accounts come over?",
+      "a": "Yes. Tokn imports from Aegis, 2FAS, Stratum, Google Authenticator, and standard otpauth:// URIs. Load an encrypted backup or export from one of those apps, scan a QR code with the camera, pick a QR image from your gallery, or type a secret in by hand."
+    },
+    "newPhone": {
+      "q": "How do I move to a new phone?",
+      "a": "Two ways. Use an encrypted backup file, or sync device to device over local Wi-Fi, Wi-Fi Direct, or an animated QR code. The sync handshake is end-to-end encrypted and nothing leaves the local network."
+    },
+    "account": {
+      "q": "Does Tokn need an account or internet access?",
+      "a": "Neither. Tokn works fully offline. The optional internet permission is only used if you opt in to fetching service icons, and it is disabled by default."
+    },
+    "free": {
+      "q": "Is it really free, and can I help?",
+      "a": "Tokn is free software under the GPL-3.0. The code, releases, and issue tracker are on GitHub. Feature ideas, bug reports, and pull requests are all welcome."
+    },
+    "bug": {
+      "q": "Where can I report a bug?",
+      "a": "Open an issue on the GitHub issue tracker at github.com/fthomys/tokn/issues. Include your Android version, how to reproduce it, and what you expected to happen. If you would rather not use GitHub, email us instead: __EMAIL__"
+    }
+  },
+  "Cta": {
+    "heading": "Get Tokn",
+    "lead": "Install the app, add your first account in a few seconds, and keep your second factor where it belongs: with you.",
+    "scan": "Scan to install"
+  },
+  "Footer": {
+    "tagline": "A free, open-source 2FA authenticator for Android.",
+    "productTitle": "Product",
+    "projectTitle": "Project",
+    "sourceCode": "Source code",
+    "releases": "Releases",
+    "reportIssue": "Report an issue",
+    "licenseGpl": "License (GPL-3.0)",
+    "copyright": "© {year} DiamondForge Labs. Free software under the GPL-3.0.",
+    "privacy": "Privacy",
+    "imprint": "Imprint",
+    "license": "License",
+    "trademarks": "All product names, logos and brands are property of their respective owners. References to other apps and services are nominative and do not imply any affiliation or endorsement."
+  },
+  "ThemeToggle": {
+    "toggle": "Toggle theme",
+    "state": "Theme: {current}. Switch to {next}.",
+    "light": "light",
+    "dark": "dark",
+    "system": "system"
+  },
+  "Email": {
+    "reveal": "click to reveal email"
+  },
+  "Common": {
+    "backHome": "Back home"
+  },
+  "Privacy": {
+    "title": "Privacy",
+    "effective": "Effective 2026-06-06",
+    "intro": "This policy covers the Tokn app and this website. Tokn is a free service from DiamondForge Labs (the “Service Provider”), provided as is. The app is built so there is nothing to collect. The website uses privacy-friendly, self-hosted analytics.",
+    "appHeading": "What the app collects",
+    "appIntro": "The Application does not obtain any information when you download and use it. No registration or account is required.",
+    "appNoAccountTitle": "No account.",
+    "appNoAccountText": "You never sign up or log in. There is no Tokn server.",
+    "appNoAnalyticsTitle": "No analytics or telemetry.",
+    "appNoAnalyticsText": "The app does not track usage and ships no ad or analytics SDKs. It does not use Google Play Services.",
+    "appOnDeviceTitle": "Your data stays on your device.",
+    "appOnDeviceText": "Accounts and secrets live in an SQLCipher-encrypted database on your phone. Codes are generated locally and the app works fully offline.",
+    "appBackupsTitle": "Backups and sync are yours.",
+    "appBackupsText": "Encrypted backups are written where you choose. Device-to-device sync happens directly between your phones over the local network and is end-to-end encrypted. Nothing passes through us.",
+    "appLocationTitle": "No location.",
+    "appLocationText": "The app does not collect precise location information from your device.",
+    "permissionsIntro": "The app requests only the permissions it needs:",
+    "permCameraTitle": "Camera",
+    "permCameraText": "to scan QR codes when adding an account or syncing.",
+    "permInternetTitle": "Internet (optional, off by default)",
+    "permInternetText": "only if you opt in to fetching service icons.",
+    "permBiometricTitle": "Biometric",
+    "permBiometricText": "to unlock the vault.",
+    "siteHeading": "This website",
+    "siteAnalyticsTitle": "Privacy-friendly analytics.",
+    "siteAnalyticsText": "This site uses Umami, a self-hosted, cookieless analytics tool running on our own infrastructure at analytics.diamondforge.me. It records aggregate, anonymous visit statistics such as page views and referrers. It sets no cookies, builds no profile of you, and your data is never sold or shared with advertisers. There is no session replay and no cross-site tracking.",
+    "siteFontsTitle": "Self-hosted fonts.",
+    "siteFontsText": "Fonts are served from the site itself, not a third party.",
+    "siteLinksTitle": "Outbound links.",
+    "siteLinksText": "Buttons to Google Play, F-Droid, and GitHub take you to those services, which have their own privacy policies.",
+    "thirdPartiesHeading": "Third parties",
+    "thirdPartiesText": "The app does not collect any information, so nothing about the app is shared with third parties. The website analytics described above run on our own self-hosted infrastructure, so visit data is not handed to a third-party analytics provider.",
+    "optOutHeading": "Your opt-out rights",
+    "optOutText": "You can stop all collection by the app by uninstalling it, using the standard uninstall process on your device or the marketplace you installed from. For the website, you can block analytics with your browser settings, a content blocker, or by sending a Do Not Track signal.",
+    "childrenHeading": "Children",
+    "childrenText1": "The Application is not used to knowingly solicit data from or market to children under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children, and encourages all children never to submit any personally identifiable information through the Application. Parents and legal guardians are encouraged to monitor their children's internet usage and to help enforce this policy by instructing their children never to provide personally identifiable information through the Application without their permission.",
+    "childrenText2Pre": "If you have reason to believe that a child has provided personally identifiable information to the Service Provider through the Application, please contact us at ",
+    "childrenText2Post": " so we can take the necessary action. You must also be at least 16 years of age to consent to the processing of your personally identifiable information in your country (in some countries we may allow your parent or guardian to do so on your behalf).",
+    "securityHeading": "Security",
+    "securityText": "The Service Provider is concerned about safeguarding the confidentiality of your information. The app collects nothing, and the website holds only aggregate, anonymous statistics, so there is no personal data store to expose.",
+    "changesHeading": "Changes",
+    "changesText": "This Privacy Policy may be updated from time to time for any reason. We will notify you of any changes by updating this page with the new policy and effective date. You are advised to review this page regularly, as continued use is deemed approval of all changes.",
+    "consentHeading": "Your consent",
+    "consentText": "By using the Application, you consent to the processing of your information as set out in this Privacy Policy, now and as amended by the Service Provider.",
+    "contactHeading": "Contact",
+    "contactPre": "If you have any questions about privacy or these practices, email us at ",
+    "contactMid": ". For bugs or feature requests, open an issue on ",
+    "contactGithub": "GitHub",
+    "contactPost": "."
+  },
+  "Imprint": {
+    "title": "Imprint",
+    "law": "Information according to § 5 DDG",
+    "noticeLabel": "Notice",
+    "noticePre": "Tokn is operated on a strictly ",
+    "noticeStrong": "non-commercial, non-profit basis",
+    "noticePost": ". No fees are charged, no revenue is generated, and no financial compensation of any kind is received in connection with this project. It is developed and maintained as a private hobby project without any commercial intent.",
+    "contactLabel": "Contact",
+    "emailLabel": "Email"
+  }
+}

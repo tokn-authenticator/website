@@ -1,17 +1,20 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const encoded = "Y29udGFjdEBkaWFtb25kZm9yZ2UubWU=";
 
 export function RevealEmail({
   className,
-  label = "click to reveal email",
+  label,
 }: {
   className?: string;
   label?: string;
 }) {
+  const t = useTranslations("Email");
   const [email, setEmail] = useState<string | null>(null);
+  const buttonLabel = label ?? t("reveal");
 
   if (email) {
     return (
@@ -23,7 +26,7 @@ export function RevealEmail({
 
   return (
     <button type="button" onClick={() => setEmail(atob(encoded))} className={className}>
-      {label}
+      {buttonLabel}
     </button>
   );
 }

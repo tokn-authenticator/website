@@ -1,9 +1,11 @@
 import { siGoogleplay, siFdroid, siGithub } from "simple-icons";
+import { useTranslations } from "next-intl";
 import { BrandGlyph } from "./BrandGlyph";
 import { StoreQr } from "./StoreQr";
 import { site } from "@/lib/site";
 
 export function CtaBand() {
+  const t = useTranslations("Cta");
   return (
     <section id="get" className="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-16">
       <div className="relative overflow-hidden rounded-[2rem] border border-border bg-surface px-7 py-12 sm:px-12 sm:py-16">
@@ -13,10 +15,9 @@ export function CtaBand() {
         />
         <div className="relative grid items-center gap-10 lg:grid-cols-[1.4fr_0.6fr]">
           <div>
-            <h2 className="text-balance text-3xl font-bold sm:text-4xl">Get Tokn</h2>
+            <h2 className="text-balance text-3xl font-bold sm:text-4xl">{t("heading")}</h2>
             <p className="mt-4 max-w-lg text-pretty text-lg text-muted">
-              Install the app, add your first account in a few seconds, and keep your second factor
-              where it belongs: with you.
+              {t("lead")}
             </p>
             <div className="mt-8 grid grid-cols-2 gap-3 min-[485px]:flex min-[485px]:flex-wrap min-[485px]:items-center">
               <a
@@ -51,7 +52,7 @@ export function CtaBand() {
 
           <div className="hidden flex-col items-center gap-2 justify-self-end lg:flex">
             <StoreQr size={120} />
-            <span className="text-sm text-muted">Scan to install</span>
+            <span className="text-sm text-muted">{t("scan")}</span>
           </div>
         </div>
       </div>

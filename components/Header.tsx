@@ -2,18 +2,21 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { BrandMark } from "./BrandMark";
 import { ThemeToggle } from "./ThemeToggle";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 
 const nav = [
-  { href: "#features", label: "Features" },
-  { href: "#security", label: "Security" },
-  { href: "#sync", label: "Sync" },
-  { href: "#compare", label: "Compare" },
-  { href: "#faq", label: "FAQ" },
-];
+  { href: "#features", key: "features" },
+  { href: "#security", key: "security" },
+  { href: "#sync", key: "sync" },
+  { href: "#compare", key: "compare" },
+  { href: "#faq", key: "faq" },
+] as const;
 
 export function Header() {
+  const t = useTranslations("Nav");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -33,7 +36,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        <a href="#top" className="flex items-center gap-2.5" aria-label="Tokn home">
+        <a href="#top" className="flex items-center gap-2.5" aria-label={t("home")}>
           <BrandMark className="h-9 w-9" />
           <span className="font-display text-lg font-semibold tracking-tight">Tokn</span>
         </a>
@@ -45,23 +48,24 @@ export function Header() {
               href={n.href}
               className="rounded-full px-3.5 py-2 text-sm text-muted transition hover:text-text"
             >
-              {n.label}
+              {t(n.key)}
             </a>
           ))}
         </nav>
 
         <div className="flex items-center gap-2">
+          <LocaleSwitcher />
           <ThemeToggle />
           <a
             href="#get"
             className="hidden rounded-full bg-primary px-4 py-2 text-sm font-semibold text-on-primary transition hover:bg-primary-strong sm:inline-flex"
           >
-            Get Tokn
+            {t("getTokn")}
           </a>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            aria-label="Toggle menu"
+            aria-label={t("toggleMenu")}
             aria-expanded={open}
             className="inline-grid h-10 w-10 place-items-center rounded-full border border-border text-muted transition hover:text-text md:hidden"
           >
@@ -80,7 +84,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className="rounded-xl px-3 py-3 text-base text-text transition hover:bg-surface-2"
               >
-                {n.label}
+                {t(n.key)}
               </a>
             ))}
             <a
@@ -88,7 +92,7 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="mt-1 rounded-full bg-primary px-4 py-3 text-center text-base font-semibold text-on-primary"
             >
-              Get Tokn
+              {t("getTokn")}
             </a>
           </nav>
         </div>
