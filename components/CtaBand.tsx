@@ -51,7 +51,7 @@ export function CtaBand() {
           </div>
 
           <div className="hidden flex-col items-center gap-2 justify-self-end lg:flex">
-            <StoreQr size={120} />
+            <StoreQr size={120} label={t("qrLabel")} />
             <span className="text-sm text-muted">{t("scan")}</span>
           </div>
         </div>

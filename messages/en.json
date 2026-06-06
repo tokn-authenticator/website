@@ -28,7 +28,7 @@
     "titleLine1": "Your 2FA codes.",
     "titleLine2": "Offline.",
     "lead": "Tokn is a free, open-source authenticator for Android. Your one-time codes stay on your device, encrypted. No account, no cloud, no analytics.",
-    "subnote": "No account stands between you and your codes, and they're generated offline.",
+    "subnote": "TOTP and HOTP codes, generated offline on Android. No account stands between you and your 2FA.",
     "screenshotAlt": "Tokn vault on Android"
   },
   "Principles": {
@@ -203,7 +203,8 @@
   "Cta": {
     "heading": "Get Tokn",
     "lead": "Install the app, add your first account in a few seconds, and keep your second factor where it belongs: with you.",
-    "scan": "Scan to install"
+    "scan": "Scan to install",
+    "qrLabel": "QR code to install Tokn from Google Play"
   },
   "Footer": {
     "tagline": "A free, open-source 2FA authenticator for Android.",

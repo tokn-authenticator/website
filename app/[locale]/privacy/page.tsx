@@ -11,6 +11,39 @@ import { RevealEmail } from "@/components/RevealEmail";
 import { site } from "@/lib/site";
 import { languageAlternates, localizedPath } from "@/lib/meta";
 
+function PrivacyJsonLd({ locale, title }: { locale: string; title: string }) {
+  const home = `${site.url}${localizedPath(locale, "/")}`;
+  const here = `${site.url}${localizedPath(locale, "/privacy")}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${here}#breadcrumbs`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Tokn", item: home },
+          { "@type": "ListItem", position: 2, name: title, item: here },
+        ],
+      },
+      {
+        "@type": "WebPage",
+        "@id": here,
+        url: here,
+        name: title,
+        inLanguage: locale,
+        isPartOf: { "@id": `${site.url}/#website` },
+        breadcrumb: { "@id": `${here}#breadcrumbs` },
+      },
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -42,6 +75,7 @@ export default function Privacy({ params }: { params: Promise<{ locale: string }
 
   return (
     <>
+      <PrivacyJsonLd locale={locale} title={t("title")} />
       <header className="border-b border-border">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-4 sm:px-8">
           <Link href="/" className="flex items-center gap-2.5" aria-label={nav("home")}>

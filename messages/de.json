@@ -3,10 +3,10 @@
     "siteName": "Tokn",
     "tagline": "Deine 2FA-Codes. Offline.",
     "title": "Tokn - deine 2FA-Codes, offline",
-    "description": "Tokn ist ein kostenloser, quelloffener 2FA-Authenticator für Android. Deine Einmalcodes bleiben verschlüsselt auf deinem Gerät. Kein Konto, keine Cloud, kein Tracking.",
-    "ogImageAlt": "Tokn - kostenloser, quelloffener Offline-2FA-Authenticator für Android",
+    "description": "Tokn ist ein kostenloser Open-Source-Authenticator für Android. Deine Einmalcodes bleiben verschlüsselt auf dem Handy. Kein Konto, keine Cloud, kein Tracking.",
+    "ogImageAlt": "Tokn - kostenloser Open-Source-Authenticator für Android, offline",
     "privacyTitle": "Datenschutz",
-    "privacyDescription": "Die App sammelt nichts: kein Konto, keine Telemetrie. Die Website nutzt datenschutzfreundliche, selbst gehostete Statistik ohne Cookies.",
+    "privacyDescription": "Die App sammelt nichts: kein Konto, keine Telemetrie. Die Website nutzt anonyme Statistik auf eigenem Server, ohne Cookies.",
     "imprintTitle": "Impressum",
     "imprintDescription": "Rechtliche Angaben und Kontakt zu Tokn."
   },
@@ -27,46 +27,46 @@
     "badge": "Open Source, GPL-3.0",
     "titleLine1": "Deine 2FA-Codes.",
     "titleLine2": "Offline.",
-    "lead": "Tokn ist ein kostenloser, quelloffener Authenticator für Android. Deine Einmalcodes bleiben verschlüsselt auf deinem Gerät. Kein Konto, keine Cloud, kein Tracking.",
-    "subnote": "Kein Konto steht zwischen dir und deinen Codes, und sie entstehen offline.",
+    "lead": "Tokn ist ein kostenloser Open-Source-Authenticator für Android. Deine Einmalcodes bleiben verschlüsselt auf dem Handy. Kein Konto, keine Cloud, kein Tracking.",
+    "subnote": "TOTP- und HOTP-Codes, offline erzeugt auf Android. Kein Konto steht zwischen dir und deiner 2FA.",
     "screenshotAlt": "Tokn-Tresor auf Android"
   },
   "Principles": {
     "privacy": {
-      "title": "Privat von Grund auf",
-      "text": "Keine Anmeldung, keine Telemetrie und keine Google Play Services auf deinem Gerät."
+      "title": "Privat von Haus aus",
+      "text": "Keine Anmeldung, keine Telemetrie, keine Google Play Services auf dem Gerät."
     },
     "vault": {
       "title": "Verschlüsselter Tresor",
-      "text": "Gespeichert in einer SQLCipher-Datenbank, entsperrt per Biometrie oder Passwort."
+      "text": "Liegt in einer SQLCipher-Datenbank, entsperrt per Biometrie oder Passwort."
     },
     "offline": {
       "title": "Komplett offline",
-      "text": "Codes entstehen lokal auf deinem Handy. Nichts wird irgendwohin gesendet."
+      "text": "Codes entstehen lokal auf dem Handy. Es geht nichts raus."
     },
     "oss": {
       "title": "Open Source",
-      "text": "GPL-3.0, Quellcode auf GitHub und veröffentlicht auf F-Droid."
+      "text": "GPL-3.0, Quellcode auf GitHub, veröffentlicht auf F-Droid."
     }
   },
   "Features": {
     "eyebrow": "Funktionen",
     "heading": "Alles, was du brauchst. Nichts, das nach Hause funkt.",
-    "lead": "Ein durchdachter Material-3-Tresor mit den Einstellungen, die du erwartest, und ein paar, die andere Authenticator weglassen.",
+    "lead": "Ein aufgeräumter Tresor im Material-3-Look. Alles Wichtige ist da, dazu ein paar Dinge, die andere Apps weglassen.",
     "screenshotAlt": "Tokn-Tresor mit gruppierten Konten und Live-Codes",
     "vault": {
       "title": "Verschlüsselter Tresor",
-      "text": "Deine Token liegen in einer SQLCipher-Datenbank. Entsperre per Fingerabdruck, Gesicht oder Passwort.",
+      "text": "Deine Token liegen in einer SQLCipher-Datenbank. Entsperrt wird per Fingerabdruck, Gesicht oder Passwort.",
       "alt": "Sicherheitseinstellungen mit aktiver Tresor-Verschlüsselung und Biometrie"
     },
     "sync": {
       "title": "Gerät-zu-Gerät-Sync",
-      "text": "Übertrage Konten auf ein neues Handy per lokalem WLAN, Wi-Fi Direct oder animiertem QR-Code. Der Handshake ist Ende-zu-Ende verschlüsselt und verlässt dein Netzwerk nie.",
+      "text": "Konten aufs neue Handy bringen, per lokalem WLAN, Wi-Fi Direct oder animiertem QR-Code. Der Handshake ist Ende-zu-Ende verschlüsselt und bleibt in deinem Netz.",
       "alt": "Auswahl einer Sync-Methode: WLAN, Wi-Fi Direct oder QR-Code"
     },
     "backup": {
       "title": "Backup und Wiederherstellung",
-      "text": "Verschlüsselte Backups für den Umzug aufs neue Handy oder einfach als Kopie, die dir gehört.",
+      "text": "Verschlüsselte Backups: fürs neue Handy oder einfach als Kopie, die dir gehört.",
       "alt": "Bildschirm für Backup und Wiederherstellung"
     },
     "import": {
@@ -76,19 +76,19 @@
     },
     "groups": {
       "title": "Mit Gruppen ordnen",
-      "text": "Sortiere Konten in eigene Gruppen, auch mehrere pro Konto, und ordne die Liste nach deinem Geschmack.",
+      "text": "Sortiere Konten in eigene Gruppen, gern mehrere pro Konto, und bring die Liste in deine Reihenfolge.",
       "alt": "Tresor-Startseite mit gruppierten Konten und Live-Codes"
     },
     "material": {
       "title": "Material You",
-      "text": "Material-3-Design mit hellem, dunklem oder Systemthema und optionaler dynamischer Farbe.",
+      "text": "Material-3-Design in Hell, Dunkel oder nach System, optional mit dynamischen Farben.",
       "alt": "Darstellungseinstellungen mit Themenoptionen"
     }
   },
   "Security": {
     "eyebrow": "Sicherheit",
     "heading": "Standardmäßig dicht",
-    "lead": "Die meisten Authenticator zeigen deine Token, sobald du sie öffnest. Tokn hält sie verschlossen, bis du beweist, dass du es bist.",
+    "lead": "Die meisten Apps zeigen deine Token, sobald du sie öffnest. Tokn hält sie zu, bis du dich ausweist.",
     "altDisabled": "Sicherheitseinstellungen mit unverschlüsseltem Tresor",
     "altEnabled": "Sicherheitseinstellungen mit aktiver Tresor-Verschlüsselung und Biometrie",
     "rest": {
@@ -97,41 +97,41 @@
     },
     "unlock": {
       "title": "Entsperren per Biometrie oder Passwort",
-      "text": "Öffne den Tresor per Fingerabdruck oder Gesicht, mit Passwort als Rückfallebene."
+      "text": "Öffne den Tresor per Fingerabdruck oder Gesicht, Passwort als Rückfall."
     },
     "screenshot": {
       "title": "Screenshot-Schutz",
-      "text": "Halte Codes auf Wunsch aus der App-Vorschau heraus und blockiere Bildschirmaufnahmen."
+      "text": "Auf Wunsch tauchen Codes nicht in der App-Vorschau auf, und Screenshots sind gesperrt."
     },
     "standards": {
-      "title": "Auf Standards aufgebaut",
+      "title": "Nach Standard",
       "text": "TOTP und HOTP nach RFC 6238 und RFC 4226, mit SHA-1, SHA-256 und SHA-512."
     }
   },
   "Sync": {
     "eyebrow": "Sync",
     "heading": "Aufs neue Handy umziehen, ganz ohne Server",
-    "lead": "Kein Cloud-Konto ist beteiligt. Wähle, wie die beiden Geräte reden, scanne zum Koppeln, und deine Konten kommen rüber. Der Handshake ist Ende-zu-Ende verschlüsselt und nichts verlässt das lokale Netzwerk.",
+    "lead": "Kein Cloud-Konto im Spiel. Wähl, wie die zwei Geräte reden, scann zum Koppeln, und deine Konten kommen rüber. Der Handshake ist Ende-zu-Ende verschlüsselt und bleibt im lokalen Netz.",
     "altSendReceive": "Auswahl zwischen Senden und Empfangen von Konten",
     "altMethods": "Auswahl einer Sync-Methode",
     "wifi": {
       "title": "Lokales WLAN",
-      "text": "Beide Handys im selben Netz koppeln sich und übertragen direkt."
+      "text": "Beide Handys im selben Netz koppeln und übertragen direkt."
     },
     "wifidirect": {
       "title": "Wi-Fi Direct",
-      "text": "Kein gemeinsames Netz nötig. Die Geräte verbinden sich direkt miteinander."
+      "text": "Kein gemeinsames Netz nötig, die Geräte verbinden sich direkt."
     },
     "qr": {
       "title": "Animierter QR-Code",
-      "text": "Komplett offline. Ein animierter QR-Code trägt die verschlüsselten Daten hinüber."
+      "text": "Komplett offline. Ein animierter QR-Code trägt die verschlüsselten Daten rüber."
     }
   },
   "Switching": {
     "eyebrow": "Wechseln",
     "heading": "Kommst du von Aegis, Stratum, Authy oder Ente Auth?",
-    "lead": "Tokn ist ein kostenloser, quelloffener Authenticator im gleichen Geist wie Aegis und Ente Auth, und eine komplett offline arbeitende Alternative zu Cloud-Apps wie Authy und Google Authenticator. Überall, wo deine alte App einen Export erlaubt, liest Tokn das Format direkt, du tippst also nicht jedes Konto neu ein. Leg dabei gleich ein verschlüsseltes Backup an.",
-    "worksWith": "Funktioniert mit jedem Dienst, der die übliche TOTP- oder HOTP-Zwei-Faktor-Authentifizierung unterstützt",
+    "lead": "Tokn liegt auf einer Linie mit Aegis und Ente Auth, und ist die Offline-Alternative zu Cloud-Apps wie Authy oder Google Authenticator. Wo deine alte App exportieren kann, liest Tokn das Format direkt ein. Du tippst also nicht jedes Konto neu. Ein verschlüsseltes Backup ist gleich mit dabei.",
+    "worksWith": "Läuft mit jedem Dienst, der normales TOTP oder HOTP für Zwei-Faktor nutzt",
     "altPicker": "Auswahl einer Importquelle",
     "altBackup": "Verschlüsseltes Backup und Wiederherstellung",
     "sources": {
@@ -144,8 +144,8 @@
   },
   "Comparison": {
     "eyebrow": "Im Vergleich",
-    "heading": "Tokn neben den Apps, von denen Leute wechseln",
-    "lead": "Die ehrliche Fassung. Aegis ist nah verwandt und 2FAS ist auch solide. Wo Tokn vorneliegt: Konten aufs neue Handy bringen, ganz ohne Server dazwischen.",
+    "heading": "Tokn neben den Apps, von denen die Leute wechseln",
+    "lead": "Ehrlich gesagt: Aegis ist nah dran, und 2FAS ist auch gut. Wo Tokn vorn liegt, ist der Umzug aufs neue Handy, ohne Server dazwischen.",
     "caption": "Funktionsvergleich von Tokn mit Aegis, Google Authenticator, 2FAS, Stratum und Authy",
     "yes": "Ja",
     "partial": "Teilweise",
@@ -153,11 +153,11 @@
     "legendYes": "Ja",
     "legendPartial": "Teilweise oder optional",
     "legendNo": "Nein",
-    "summary": "Gegenüber Google Authenticator und Authy ist Tokn quelloffen, hält deine Token aus der Cloud und lässt dich ein verschlüsseltes Backup exportieren, das dir gehört, statt dich an ein Konto zu binden. Aegis, Stratum und 2FAS teilen den größten Teil dieser datenschutzfreundlichen Grundlage. Was Tokn abhebt: Konten aufs neue Handy bringen, ohne Server dazwischen, über das lokale WLAN, Wi-Fi Direct oder einen animierten QR-Code.",
+    "summary": "Gegenüber Google Authenticator und Authy ist Tokn Open Source, hält deine Token aus der Cloud und lässt dich ein verschlüsseltes Backup exportieren, das dir gehört, statt dich an ein Konto zu binden. Aegis, Stratum und 2FAS haben die gleiche datenschutzfreundliche Basis. Der Unterschied bei Tokn: der Umzug aufs neue Handy ohne Server dazwischen, über lokales WLAN, Wi-Fi Direct oder einen animierten QR-Code.",
     "rows": {
       "oss": { "feature": "Open Source" },
       "noCloud": { "feature": "Keine Secrets in der Cloud", "note": "Keine Konto-Synchronisierung deiner Token" },
-      "encryptedVault": { "feature": "Verschlüsselter Tresor im Ruhezustand", "note": "Auf der Platte verschlüsselt, mit einem Schlüssel, den nur du öffnest" },
+      "encryptedVault": { "feature": "Verschlüsselter Tresor im Ruhezustand", "note": "Auf dem Gerät verschlüsselt, mit einem Schlüssel, den nur du hast" },
       "biometric": { "feature": "Biometrie / App-Sperre", "note": "Zugriff per Fingerabdruck oder PIN absichern" },
       "noGms": { "feature": "Keine Google Play Services", "note": "Läuft auf entgoogelten Handys, auf F-Droid" },
       "localSync": { "feature": "Sync im lokalen Netz", "note": "Konten über WLAN, Wi-Fi Direct oder animierten QR-Code übertragen" },
@@ -172,41 +172,42 @@
     "eyebrow": "FAQ",
     "heading": "Fragen, beantwortet",
     "difference": {
-      "q": "Wie unterscheidet sich Tokn von Google Authenticator oder Aegis?",
-      "a": "Gegenüber Google Authenticator ist der Abstand groß: Deine Codes liegen in einem verschlüsselten Tresor hinter Biometrie oder Passwort, statt sofort auf dem Bildschirm zu stehen, sobald du die App öffnest. Tokn ist quelloffen, läuft ohne Google Play Services, und du kannst deine Konten selbst exportieren, sichern und umziehen. Aegis ist nah verwandt, ebenfalls quelloffen, verschlüsselt und offline. Was Tokn ergänzt: Konten aufs neue Handy bringen, ohne Server, über lokales WLAN, Wi-Fi Direct oder einen animierten QR-Code."
+      "q": "Was macht Tokn anders als Google Authenticator oder Aegis?",
+      "a": "Zu Google Authenticator ist der Abstand groß: Deine Codes stehen nicht sofort auf dem Bildschirm, sondern liegen im verschlüsselten Tresor hinter Biometrie oder Passwort. Tokn ist Open Source, läuft ohne Google Play Services, und du kannst deine Konten selbst exportieren, sichern und mitnehmen. Aegis ist nah dran, auch Open Source, verschlüsselt und offline. Was Tokn draufpackt: der Umzug aufs neue Handy ohne Server, über lokales WLAN, Wi-Fi Direct oder einen animierten QR-Code."
     },
     "storage": {
-      "q": "Wo werden meine Codes gespeichert?",
-      "a": "Nur auf deinem Gerät, in einer SQLCipher-verschlüsselten Datenbank. Es gibt kein Konto und keinen Server. Codes entstehen lokal nach RFC 6238 (TOTP) und RFC 4226 (HOTP), mit Unterstützung für SHA-1, SHA-256 und SHA-512."
+      "q": "Wo liegen meine Codes?",
+      "a": "Nur auf deinem Gerät, in einer mit SQLCipher verschlüsselten Datenbank. Kein Konto, kein Server. Die Codes entstehen lokal nach RFC 6238 (TOTP) und RFC 4226 (HOTP), mit SHA-1, SHA-256 und SHA-512."
     },
     "importing": {
-      "q": "Ich wechsle von einer anderen App. Kommen meine Konten mit?",
-      "a": "Ja. Tokn importiert aus Aegis, 2FAS, Stratum, Google Authenticator und standardmäßigen otpauth://-Links. Lade ein verschlüsseltes Backup oder einen Export aus einer dieser Apps, scanne einen QR-Code mit der Kamera, wähle ein QR-Bild aus deiner Galerie oder tippe ein Secret von Hand ein."
+      "q": "Ich komme von einer anderen App. Kommen meine Konten mit?",
+      "a": "Ja. Tokn importiert aus Aegis, 2FAS, Stratum, Google Authenticator und ganz normalen otpauth://-Links. Lad ein verschlüsseltes Backup oder einen Export aus einer dieser Apps, scann einen QR-Code mit der Kamera, nimm ein QR-Bild aus der Galerie, oder tipp ein Secret von Hand ein."
     },
     "newPhone": {
-      "q": "Wie ziehe ich auf ein neues Handy um?",
-      "a": "Zwei Wege. Nutze eine verschlüsselte Backup-Datei, oder synchronisiere Gerät zu Gerät über lokales WLAN, Wi-Fi Direct oder einen animierten QR-Code. Der Sync-Handshake ist Ende-zu-Ende verschlüsselt und nichts verlässt das lokale Netzwerk."
+      "q": "Wie ziehe ich aufs neue Handy um?",
+      "a": "Zwei Wege: über eine verschlüsselte Backup-Datei, oder direkt von Gerät zu Gerät per lokalem WLAN, Wi-Fi Direct oder animiertem QR-Code. Der Handshake ist Ende-zu-Ende verschlüsselt und bleibt im lokalen Netz."
     },
     "account": {
       "q": "Braucht Tokn ein Konto oder Internet?",
-      "a": "Weder noch. Tokn arbeitet komplett offline. Die optionale Internet-Berechtigung wird nur genutzt, wenn du dich für das Laden von Dienst-Icons entscheidest, und sie ist standardmäßig aus."
+      "a": "Nein, beides nicht. Tokn läuft komplett offline. Die Internet-Berechtigung ist optional und standardmäßig aus, sie wird nur gebraucht, wenn du Dienst-Icons laden willst."
     },
     "free": {
-      "q": "Ist es wirklich kostenlos, und kann ich helfen?",
-      "a": "Tokn ist freie Software unter der GPL-3.0. Code, Releases und Issue-Tracker liegen auf GitHub. Ideen für Funktionen, Fehlerberichte und Pull Requests sind alle willkommen."
+      "q": "Ist es wirklich kostenlos, und kann ich mitmachen?",
+      "a": "Tokn ist freie Software unter der GPL-3.0. Code, Releases und Issues liegen auf GitHub. Ideen, Bug-Reports und Pull Requests sind alle willkommen."
     },
     "bug": {
-      "q": "Wo kann ich einen Fehler melden?",
-      "a": "Öffne ein Issue im GitHub-Tracker unter github.com/fthomys/tokn/issues. Nenne deine Android-Version, wie man den Fehler reproduziert, und was du erwartet hast. Wenn du GitHub lieber meidest, schreib uns stattdessen eine E-Mail: __EMAIL__"
+      "q": "Wo melde ich einen Bug?",
+      "a": "Mach ein Issue im GitHub-Tracker auf: github.com/fthomys/tokn/issues. Schreib dazu, welche Android-Version du hast, wie man den Fehler auslöst und was du erwartet hättest. Ohne GitHub geht es auch per Mail: __EMAIL__"
     }
   },
   "Cta": {
     "heading": "Tokn holen",
-    "lead": "Installiere die App, füge dein erstes Konto in wenigen Sekunden hinzu, und behalte deinen zweiten Faktor da, wo er hingehört: bei dir.",
-    "scan": "Zum Installieren scannen"
+    "lead": "Installier Tokn, sichere in ein paar Sekunden dein erstes Konto ab, und deine Codes bleiben auf dem Handy, nicht in der Cloud.",
+    "scan": "Zum Installieren scannen",
+    "qrLabel": "QR-Code zur Installation von Tokn aus Google Play"
   },
   "Footer": {
-    "tagline": "Ein kostenloser, quelloffener 2FA-Authenticator für Android.",
+    "tagline": "Kostenloser Open-Source-Authenticator für Android.",
     "productTitle": "Produkt",
     "projectTitle": "Projekt",
     "sourceCode": "Quellcode",
@@ -217,7 +218,7 @@
     "privacy": "Datenschutz",
     "imprint": "Impressum",
     "license": "Lizenz",
-    "trademarks": "Alle Produktnamen, Logos und Marken sind Eigentum ihrer jeweiligen Inhaber. Verweise auf andere Apps und Dienste dienen nur der Benennung und bedeuten keine Verbindung oder Befürwortung."
+    "trademarks": "Alle Produktnamen, Logos und Marken gehören ihren jeweiligen Inhabern. Verweise auf andere Apps und Dienste dienen nur der Benennung und bedeuten keine Verbindung oder Empfehlung."
   },
   "ThemeToggle": {
     "toggle": "Thema umschalten",
@@ -235,52 +236,52 @@
   "Privacy": {
     "title": "Datenschutz",
     "effective": "Gültig ab 2026-06-06",
-    "intro": "Diese Erklärung gilt für die Tokn-App und diese Website. Tokn ist ein kostenloser Dienst von DiamondForge Labs (dem „Anbieter“), bereitgestellt wie er ist. Die App ist so gebaut, dass es nichts zu sammeln gibt. Die Website nutzt datenschutzfreundliche, selbst gehostete Statistik.",
+    "intro": "Diese Erklärung gilt für die Tokn-App und diese Website. Tokn ist ein kostenloses Angebot von DiamondForge Labs (dem „Anbieter“), bereitgestellt wie es ist. Die App ist so gebaut, dass es nichts zu sammeln gibt. Die Website nutzt anonyme Statistik auf einem eigenen Server.",
     "appHeading": "Was die App sammelt",
-    "appIntro": "Die Anwendung erhält keinerlei Informationen, wenn du sie herunterlädst und nutzt. Es ist keine Registrierung und kein Konto nötig.",
+    "appIntro": "Die App holt sich keine Daten, wenn du sie herunterlädst und benutzt. Es braucht keine Registrierung und kein Konto.",
     "appNoAccountTitle": "Kein Konto.",
     "appNoAccountText": "Du meldest dich nie an. Es gibt keinen Tokn-Server.",
     "appNoAnalyticsTitle": "Keine Statistik, keine Telemetrie.",
-    "appNoAnalyticsText": "Die App verfolgt keine Nutzung und enthält keine Werbe- oder Analyse-SDKs. Sie nutzt keine Google Play Services.",
-    "appOnDeviceTitle": "Deine Daten bleiben auf deinem Gerät.",
-    "appOnDeviceText": "Konten und Secrets liegen in einer SQLCipher-verschlüsselten Datenbank auf deinem Handy. Codes entstehen lokal und die App arbeitet komplett offline.",
+    "appNoAnalyticsText": "Die App verfolgt keine Nutzung und hat keine Werbe- oder Analyse-SDKs an Bord. Sie nutzt keine Google Play Services.",
+    "appOnDeviceTitle": "Deine Daten bleiben auf dem Gerät.",
+    "appOnDeviceText": "Konten und Secrets liegen in einer mit SQLCipher verschlüsselten Datenbank auf deinem Handy. Codes entstehen lokal, und die App läuft komplett offline.",
     "appBackupsTitle": "Backups und Sync gehören dir.",
-    "appBackupsText": "Verschlüsselte Backups werden dort abgelegt, wo du es wählst. Der Gerät-zu-Gerät-Sync läuft direkt zwischen deinen Handys über das lokale Netz und ist Ende-zu-Ende verschlüsselt. Nichts läuft über uns.",
+    "appBackupsText": "Verschlüsselte Backups landen dort, wo du es festlegst. Der Sync läuft direkt zwischen deinen Handys über das lokale Netz und ist Ende-zu-Ende verschlüsselt. Nichts läuft über uns.",
     "appLocationTitle": "Kein Standort.",
     "appLocationText": "Die App erfasst keine genauen Standortdaten von deinem Gerät.",
-    "permissionsIntro": "Die App fragt nur die Berechtigungen ab, die sie braucht:",
+    "permissionsIntro": "Die App fragt nur die Berechtigungen ab, die sie wirklich braucht:",
     "permCameraTitle": "Kamera",
     "permCameraText": "um QR-Codes zu scannen, wenn du ein Konto hinzufügst oder synchronisierst.",
     "permInternetTitle": "Internet (optional, standardmäßig aus)",
-    "permInternetText": "nur wenn du dich für das Laden von Dienst-Icons entscheidest.",
+    "permInternetText": "nur wenn du Dienst-Icons laden willst.",
     "permBiometricTitle": "Biometrie",
     "permBiometricText": "um den Tresor zu entsperren.",
     "siteHeading": "Diese Website",
-    "siteAnalyticsTitle": "Datenschutzfreundliche Statistik.",
-    "siteAnalyticsText": "Diese Seite nutzt Umami, ein selbst gehostetes Statistik-Tool ohne Cookies, das auf unserer eigenen Infrastruktur unter analytics.diamondforge.me läuft. Es erfasst zusammengefasste, anonyme Besuchsdaten wie Seitenaufrufe und Verweisquellen. Es setzt keine Cookies, erstellt kein Profil von dir, und deine Daten werden nie verkauft oder an Werbetreibende weitergegeben. Es gibt keine Sitzungsaufzeichnung und kein seitenübergreifendes Tracking.",
-    "siteFontsTitle": "Selbst gehostete Schriften.",
-    "siteFontsText": "Schriften werden von der Seite selbst ausgeliefert, nicht von einem Dritten.",
+    "siteAnalyticsTitle": "Anonyme Statistik.",
+    "siteAnalyticsText": "Diese Seite nutzt Umami, ein Statistik-Tool ohne Cookies, das auf unserem eigenen Server unter analytics.diamondforge.me läuft. Es zählt anonyme Eckdaten wie Seitenaufrufe und Verweisquellen. Es setzt keine Cookies, legt kein Profil über dich an, und deine Daten werden nie verkauft oder an Werbetreibende weitergegeben. Keine Sitzungsaufzeichnung, kein seitenübergreifendes Tracking.",
+    "siteFontsTitle": "Eigene Schriften.",
+    "siteFontsText": "Schriften kommen von der Seite selbst, nicht von einem Dritten.",
     "siteLinksTitle": "Ausgehende Links.",
-    "siteLinksText": "Buttons zu Google Play, F-Droid und GitHub führen dich zu diesen Diensten, die ihre eigenen Datenschutzerklärungen haben.",
+    "siteLinksText": "Buttons zu Google Play, F-Droid und GitHub führen zu diesen Diensten, die ihre eigenen Datenschutzerklärungen haben.",
     "thirdPartiesHeading": "Dritte",
-    "thirdPartiesText": "Die App sammelt keine Informationen, also wird nichts über die App an Dritte weitergegeben. Die oben beschriebene Website-Statistik läuft auf unserer eigenen, selbst gehosteten Infrastruktur, die Besuchsdaten gehen also nicht an einen externen Analyse-Anbieter.",
-    "optOutHeading": "Deine Widerspruchsrechte",
-    "optOutText": "Du kannst die gesamte Erfassung durch die App stoppen, indem du sie deinstallierst, über den üblichen Weg auf deinem Gerät oder den Store, aus dem du sie installiert hast. Für die Website kannst du die Statistik über deine Browser-Einstellungen, einen Content-Blocker oder ein Do-Not-Track-Signal blockieren.",
+    "thirdPartiesText": "Die App sammelt nichts, also wird auch nichts über die App an Dritte weitergegeben. Die Website-Statistik läuft auf unserem eigenen Server, die Besuchsdaten gehen also an keinen externen Anbieter.",
+    "optOutHeading": "Dein Widerspruch",
+    "optOutText": "Die Erfassung durch die App stoppst du, indem du sie deinstallierst, über den normalen Weg auf deinem Gerät oder dem Store, aus dem du sie hast. Auf der Website blockierst du die Statistik über deine Browser-Einstellungen, einen Content-Blocker oder ein Do-Not-Track-Signal.",
     "childrenHeading": "Kinder",
-    "childrenText1": "Die Anwendung wird nicht genutzt, um wissentlich Daten von Kindern unter 13 Jahren zu erheben oder an sie zu vermarkten. Der Anbieter erhebt wissentlich keine personenbezogenen Daten von Kindern und ermutigt alle Kinder, niemals personenbezogene Daten über die Anwendung anzugeben. Eltern und Erziehungsberechtigte sind aufgefordert, die Internetnutzung ihrer Kinder zu beaufsichtigen und diese Erklärung durchzusetzen, indem sie ihren Kindern aufgeben, ohne ihre Erlaubnis niemals personenbezogene Daten über die Anwendung anzugeben.",
-    "childrenText2Pre": "Wenn du Grund zur Annahme hast, dass ein Kind dem Anbieter über die Anwendung personenbezogene Daten übermittelt hat, kontaktiere uns bitte unter ",
-    "childrenText2Post": ", damit wir die nötigen Schritte einleiten können. Außerdem musst du in deinem Land mindestens 16 Jahre alt sein, um der Verarbeitung deiner personenbezogenen Daten zuzustimmen (in manchen Ländern erlauben wir das deinen Eltern oder Erziehungsberechtigten an deiner Stelle).",
+    "childrenText1": "Die App wird nicht genutzt, um wissentlich Daten von Kindern unter 13 Jahren zu erheben oder an sie zu vermarkten. Der Anbieter erhebt wissentlich keine personenbezogenen Daten von Kindern und bittet alle Kinder, niemals personenbezogene Daten über die App anzugeben. Eltern und Erziehungsberechtigte sollten die Internetnutzung ihrer Kinder im Blick behalten und ihnen klarmachen, dass sie ohne Erlaubnis niemals personenbezogene Daten über die App angeben.",
+    "childrenText2Pre": "Wenn du denkst, dass ein Kind dem Anbieter über die App personenbezogene Daten geschickt hat, melde dich bitte unter ",
+    "childrenText2Post": ", damit wir das Nötige veranlassen können. Außerdem musst du in deinem Land mindestens 16 Jahre alt sein, um der Verarbeitung deiner personenbezogenen Daten zuzustimmen (in manchen Ländern dürfen das deine Eltern oder Erziehungsberechtigten für dich tun).",
     "securityHeading": "Sicherheit",
-    "securityText": "Dem Anbieter liegt an der Vertraulichkeit deiner Daten. Die App sammelt nichts, und die Website hält nur zusammengefasste, anonyme Statistik, es gibt also keinen Speicher mit personenbezogenen Daten, der offengelegt werden könnte.",
+    "securityText": "Dem Anbieter ist die Vertraulichkeit deiner Daten wichtig. Die App sammelt nichts, und die Website hält nur anonyme Eckdaten, es gibt also keinen Speicher mit personenbezogenen Daten, der offengelegt werden könnte.",
     "changesHeading": "Änderungen",
-    "changesText": "Diese Datenschutzerklärung kann von Zeit zu Zeit aus beliebigem Grund aktualisiert werden. Wir informieren dich über Änderungen, indem wir diese Seite mit der neuen Erklärung und dem neuen Gültigkeitsdatum aktualisieren. Sieh dir diese Seite regelmäßig an, da die fortgesetzte Nutzung als Zustimmung zu allen Änderungen gilt.",
+    "changesText": "Diese Datenschutzerklärung kann sich von Zeit zu Zeit ändern. Wir weisen darauf hin, indem wir diese Seite mit der neuen Fassung und dem neuen Datum aktualisieren. Schau hier ab und zu rein, denn die weitere Nutzung gilt als Zustimmung zu den Änderungen.",
     "consentHeading": "Deine Zustimmung",
-    "consentText": "Mit der Nutzung der Anwendung stimmst du der Verarbeitung deiner Daten zu, wie in dieser Datenschutzerklärung dargelegt, jetzt und in der vom Anbieter geänderten Fassung.",
+    "consentText": "Mit der Nutzung der App stimmst du der Verarbeitung deiner Daten zu, so wie sie hier beschrieben ist, jetzt und in der jeweils aktuellen Fassung des Anbieters.",
     "contactHeading": "Kontakt",
-    "contactPre": "Wenn du Fragen zum Datenschutz oder zu diesen Praktiken hast, schreib uns an ",
-    "contactMid": ". Für Fehler oder Funktionswünsche öffne ein Issue auf ",
+    "contactPre": "Wenn du Fragen zum Datenschutz hast, schreib uns an ",
+    "contactMid": ". Für Bugs oder Wünsche mach ein Issue auf ",
     "contactGithub": "GitHub",
-    "contactPost": "."
+    "contactPost": " auf."
   },
   "Imprint": {
     "title": "Impressum",
@@ -288,7 +289,7 @@
     "noticeLabel": "Hinweis",
     "noticePre": "Tokn wird streng ",
     "noticeStrong": "nicht-kommerziell und ohne Gewinnabsicht",
-    "noticePost": " betrieben. Es werden keine Gebühren erhoben, keine Einnahmen erzielt und keinerlei finanzielle Vergütung im Zusammenhang mit diesem Projekt erhalten. Es wird als privates Hobbyprojekt ohne kommerzielle Absicht entwickelt und gepflegt.",
+    "noticePost": " betrieben. Es werden keine Gebühren erhoben, keine Einnahmen erzielt und keine wie auch immer geartete Vergütung im Zusammenhang mit diesem Projekt erhalten. Es entsteht und wird gepflegt als privates Hobbyprojekt, ohne kommerzielle Absicht.",
     "contactLabel": "Kontakt",
     "emailLabel": "E-Mail"
   }
