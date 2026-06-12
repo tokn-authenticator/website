@@ -1,24 +1,23 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Sun, Moon, SunMoon } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
-type Mode = "light" | "dark" | "system";
-const order: Mode[] = ["light", "dark", "system"];
-const icons = { light: Sun, dark: Moon, system: SunMoon };
+type Mode = "light" | "dark";
+const icons = { light: Sun, dark: Moon };
 
 export function ThemeToggle() {
   const t = useTranslations("ThemeToggle");
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   // next-themes only knows the real theme after mount; this guards the hydration mismatch.
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
-  const current: Mode = mounted ? ((theme as Mode) ?? "system") : "system";
-  const next = order[(order.indexOf(current) + 1) % order.length];
+  const current: Mode = mounted ? ((resolvedTheme as Mode) ?? "light") : "light";
+  const next: Mode = current === "dark" ? "light" : "dark";
   const Icon = icons[current];
 
   return (

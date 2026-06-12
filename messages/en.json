@@ -372,8 +372,7 @@
     "toggle": "Toggle theme",
     "state": "Theme: {current}. Switch to {next}.",
     "light": "light",
-    "dark": "dark",
-    "system": "system"
+    "dark": "dark"
   },
   "Email": {
     "reveal": "click to reveal email"

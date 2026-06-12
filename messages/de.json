@@ -372,8 +372,7 @@
     "toggle": "Thema umschalten",
     "state": "Thema: {current}. Wechseln zu {next}.",
     "light": "hell",
-    "dark": "dunkel",
-    "system": "System"
+    "dark": "dunkel"
   },
   "Email": {
     "reveal": "klicken, um die E-Mail zu zeigen"
