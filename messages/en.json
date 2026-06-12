@@ -145,15 +145,16 @@
   "Comparison": {
     "eyebrow": "How it compares",
     "heading": "Tokn next to the apps people switch from",
-    "lead": "The honest version. Aegis is a close cousin and 2FAS is solid too. Where Tokn pulls ahead is moving accounts to a new phone with no server in the middle.",
-    "caption": "Feature comparison of Tokn versus Aegis, Google Authenticator, 2FAS, Stratum and Authy",
+    "lead": "The honest version. Aegis is a close cousin, and the cloud apps trade your control for convenience. Where Tokn pulls ahead is moving accounts to a new phone with no server in the middle.",
+    "caption": "Feature comparison of Tokn versus Aegis, Google Authenticator, Microsoft Authenticator, Stratum and Authy",
     "yes": "Yes",
     "partial": "Partial",
     "no": "No",
     "legendYes": "Yes",
     "legendPartial": "Partial or optional",
     "legendNo": "No",
-    "summary": "Compared with Google Authenticator and Authy, Tokn is open source, keeps your tokens off the cloud, and lets you export an encrypted backup you control instead of locking you into an account. Aegis, Stratum and 2FAS share most of that privacy-first foundation. What sets Tokn apart is moving your accounts to a new phone with no server in the middle, over the local Wi-Fi network, Wi-Fi Direct, or an animated QR code.",
+    "asOf": "As of June 2026",
+    "summary": "Compared with Google Authenticator, Microsoft Authenticator and Authy, Tokn is open source, keeps your tokens off the cloud, and lets you export an encrypted backup you control instead of locking you into an account. Aegis and Stratum share most of that privacy-first foundation. What sets Tokn apart is moving your accounts to a new phone with no server in the middle, over the local Wi-Fi network, Wi-Fi Direct, or an animated QR code.",
     "rows": {
       "oss": { "feature": "Open source" },
       "noCloud": { "feature": "No secrets in the cloud", "note": "No account sync of your tokens" },
@@ -166,6 +167,153 @@
       "customIcons": { "feature": "Custom icons & icon packs", "note": "Pick your own images, or import Aegis-style packs" },
       "groups": { "feature": "Organize with groups", "note": "Sort into custom groups, more than one per account" },
       "materialYou": { "feature": "Material You theming", "note": "Dynamic color, light / dark / system" }
+    },
+    "deepDive": "Want the one-on-one breakdown?"
+  },
+  "Vs": {
+    "title": "Tokn vs {app}",
+    "vsWord": "vs",
+    "eyebrow": "Comparison",
+    "tableHeading": "Feature by feature",
+    "tableCaption": "Feature comparison of Tokn and {app}",
+    "toknHeading": "Where Tokn pulls ahead",
+    "otherHeading": "Where {app} has the edge",
+    "verdictHeading": "Bottom line",
+    "faqHeading": "Common questions",
+    "othersHeading": "More comparisons",
+    "apps": {
+      "aegis": {
+        "metaTitle": "Tokn vs Aegis: two open source 2FA apps for Android compared",
+        "metaDescription": "Aegis and Tokn are both free, open source, offline authenticators for Android. See the feature table and where they differ, from automatic backups to device-to-device sync.",
+        "intro": "Aegis is the app most people mean when they say open source authenticator, and it has earned that reputation. Tokn stands on the same foundation: free, GPL licensed, fully offline, with an encrypted vault behind biometrics or a password. The differences are in how your codes move around.",
+        "toknBetter": "The big one is moving to a new phone. Tokn syncs accounts device to device over local Wi-Fi, Wi-Fi Direct, or an animated QR code, end-to-end encrypted, with no backup files to shuffle. With Aegis you export a backup and carry it across yourself. Tokn also reads Aegis backups directly, including encrypted ones, so trying it takes a couple of minutes, and Aegis-style icon packs come along.",
+        "otherBetter": "Aegis has been around longer, has a larger community, and its codebase has received an independent security audit. It also offers automatic scheduled backups to a folder you pick, which Tokn does not do yet. If maximum maturity is your first priority, Aegis remains an excellent place to stay.",
+        "verdict": "You cannot really go wrong with either. If you want device-to-device sync without a server and a Material You interface, give Tokn a try: your Aegis backup imports directly, so the experiment costs you a few minutes.",
+        "faq": {
+          "f1": {
+            "q": "Can I import my Aegis backup into Tokn?",
+            "a": "Yes. Tokn reads Aegis backup files directly, including encrypted ones. Export a backup in Aegis, open the import screen in Tokn, and pick the file."
+          },
+          "f2": {
+            "q": "Is Tokn open source like Aegis?",
+            "a": "Yes. Tokn is free software under the GPL-3.0. The source code is on GitHub and the app is published on F-Droid and Google Play."
+          },
+          "f3": {
+            "q": "Do both apps work without internet?",
+            "a": "Yes. Both generate TOTP and HOTP codes entirely on the device. Tokn's optional internet permission is only used if you opt in to fetching service icons, and it is off by default."
+          }
+        }
+      },
+      "googleAuth": {
+        "metaTitle": "Tokn vs Google Authenticator: the offline, open source alternative",
+        "metaDescription": "Google Authenticator syncs your codes through your Google account. Tokn keeps them on your device, encrypted and open source. Compare the two and see how to switch in one QR scan.",
+        "intro": "Google Authenticator is where most people start with 2FA. It is simple and it works, but it is closed source, tied to Google Play Services, and its convenience features run through your Google account. Tokn takes the opposite approach: your codes stay on your device in an encrypted vault, and the code that handles them is public.",
+        "toknBetter": "Tokn is open source, runs without Google Play Services, and never uploads your secrets anywhere. The vault is encrypted with SQLCipher and locked behind your fingerprint or a password. You can export an encrypted backup you control, organize accounts into groups, and move everything to a new phone over your local network instead of through a Google account. Switching is quick: Tokn scans Google Authenticator's export QR codes directly.",
+        "otherBetter": "Google Authenticator is effortless if you already live in the Google ecosystem. Account sync means a lost phone is not a lost vault, as long as you trust Google with that role, and there is nothing to configure at all.",
+        "verdict": "If you are comfortable with your 2FA codes living in your Google account, Google Authenticator is fine. If you want them offline, encrypted, and under your own control, Tokn is the switch, and it takes about a minute.",
+        "faq": {
+          "f1": {
+            "q": "How do I move from Google Authenticator to Tokn?",
+            "a": "Open Google Authenticator, choose Transfer accounts, then Export accounts, and scan the QR codes with Tokn's import screen. Everything comes across in a minute or two."
+          },
+          "f2": {
+            "q": "Does Tokn sync my codes to the cloud like Google Authenticator?",
+            "a": "No. Tokn has no account and no server. To move codes between devices you use the encrypted local sync over Wi-Fi, Wi-Fi Direct, or an animated QR code, or an encrypted backup file you control."
+          },
+          "f3": {
+            "q": "Does Tokn work on phones without Google services?",
+            "a": "Yes. Tokn has no Google Play Services dependency and is published on F-Droid as well as Google Play, so it runs fine on de-Googled phones."
+          }
+        }
+      },
+      "twofas": {
+        "metaTitle": "Tokn vs 2FAS: which open source 2FA app fits you?",
+        "metaDescription": "2FAS and Tokn are both open source authenticators. 2FAS leans on cloud backups and a browser extension, Tokn stays fully offline with local device-to-device sync. Compare them here.",
+        "intro": "2FAS is a polished, popular open source authenticator and one of the friendlier apps to switch to. The main philosophical difference: 2FAS offers cloud backups through Google Drive and a browser extension that talks to your phone, while Tokn keeps everything strictly on your device and your local network.",
+        "toknBetter": "Tokn never touches a cloud service. Backups are encrypted files you store wherever you want, and moving to a new phone happens directly between the two devices over local Wi-Fi, Wi-Fi Direct, or an animated QR code. Tokn also runs without Google Play Services, ships on F-Droid, organizes accounts into groups, and reads 2FAS backups directly, so switching is painless.",
+        "otherBetter": "2FAS has an iOS app and a browser extension that approves logins from your phone, and neither has an equivalent in Tokn. If you need your authenticator on an iPhone too, or you want Google Drive backups for convenience, 2FAS is the better fit.",
+        "verdict": "Both are honest open source apps. Pick 2FAS for the cross-platform extras. Pick Tokn if you want your 2FA strictly offline and your backups in your own hands.",
+        "faq": {
+          "f1": {
+            "q": "Can Tokn import my 2FAS backup?",
+            "a": "Yes. Export a backup in 2FAS, open the import screen in Tokn, and pick the file. Your accounts come across in one step."
+          },
+          "f2": {
+            "q": "Is there an iOS version of Tokn?",
+            "a": "No, Tokn is Android only. If you need an open source authenticator on iOS, 2FAS or Ente Auth are solid choices there."
+          },
+          "f3": {
+            "q": "Does Tokn have a browser extension?",
+            "a": "No, deliberately. Tokn keeps your codes in one encrypted vault on one device. You type the code when you log in, and nothing else has access to your secrets."
+          }
+        }
+      },
+      "stratum": {
+        "metaTitle": "Tokn vs Stratum (Authenticator Pro): offline 2FA apps compared",
+        "metaDescription": "Stratum and Tokn are both free, open source, offline authenticators for Android. See where they overlap and where they differ, from Wear OS support to local device-to-device sync.",
+        "intro": "Stratum, formerly Authenticator Pro, is a well-liked open source authenticator that shares most of Tokn's values: offline, encrypted, no account, available on F-Droid. The differences sit at the edges, and which edge matters depends on you.",
+        "toknBetter": "Tokn adds device-to-device sync over local Wi-Fi, Wi-Fi Direct, or an animated QR code, so a new phone does not mean shuffling backup files. It also leans fully into Material You with dynamic color across the app. And Tokn reads Stratum backups directly, so trying it out takes a couple of minutes.",
+        "otherBetter": "Stratum has a Wear OS companion app, so your codes can live on your watch, and it has been around longer. If a watch app matters to you, Stratum is the one to keep.",
+        "verdict": "Two apps with the same basic stance on privacy. Pick Stratum for Wear OS, pick Tokn for local sync and Material You. Either way your codes stay offline.",
+        "faq": {
+          "f1": {
+            "q": "Can Tokn import my Stratum backup?",
+            "a": "Yes. Export a backup in Stratum, open the import screen in Tokn, and pick the file. Accounts and their settings come across."
+          },
+          "f2": {
+            "q": "Does Tokn support Wear OS?",
+            "a": "Not yet. Stratum is ahead there with its watch companion app. Tokn focuses on the phone, with an encrypted vault and local device-to-device sync."
+          },
+          "f3": {
+            "q": "Do both apps work fully offline?",
+            "a": "Yes. Both generate TOTP and HOTP codes on the device with no account and no server. Tokn's optional internet permission is only for fetching service icons, and it is off by default."
+          }
+        }
+      },
+      "authy": {
+        "metaTitle": "Tokn vs Authy: the open source alternative without an account",
+        "metaDescription": "Authy requires a phone number and stores your tokens in its cloud. Tokn is open source, offline, and needs no account at all. Compare the two and see how to switch.",
+        "intro": "Authy made multi-device 2FA easy by tying your tokens to a phone number and its cloud. That convenience comes with trade-offs: closed source, a required account, and no official way to export your tokens out again. Tokn is the opposite design: no account, no server, open source, and your codes in an encrypted vault on your device.",
+        "toknBetter": "Everything in Tokn is yours. The vault is encrypted on the device, backups are files you control, and moving phones works over the local network with end-to-end encryption. There is no phone number to register, which also means no target for SIM swapping or number leaks. In 2024 an incident at Authy's parent company exposed millions of user phone numbers; an app with no account has nothing comparable to lose.",
+        "otherBetter": "Authy's cloud sync keeps several devices in step automatically and recovers your tokens if your phone disappears, as long as you keep access to the account. If hands-off multi-device sync outweighs open source and data control for you, Authy still does that well.",
+        "verdict": "Authy optimizes for convenience through its cloud, Tokn optimizes for control. Since Authy offers no export, switching means re-enrolling each account once. The earlier you do it, the fewer accounts there are to move.",
+        "faq": {
+          "f1": {
+            "q": "Can I export my tokens from Authy to Tokn?",
+            "a": "Authy has no official export. The reliable way is to open each service's security settings, disable and re-enable two-factor authentication, and scan the new QR code with Tokn. Tedious, but you only do it once."
+          },
+          "f2": {
+            "q": "Does Tokn need a phone number or an account?",
+            "a": "No. Tokn has no registration of any kind. Install it, add your accounts, done. There is no server that could lose your data."
+          },
+          "f3": {
+            "q": "What if I lose my phone and there is no cloud sync?",
+            "a": "You restore from your encrypted backup file, which you can keep anywhere you trust. Making that backup right after setup is the one habit Tokn asks of you."
+          }
+        }
+      },
+      "microsoftAuth": {
+        "metaTitle": "Tokn vs Microsoft Authenticator: the open source alternative",
+        "metaDescription": "Microsoft Authenticator backs up your codes to a Microsoft account and offers no export. Tokn is open source, offline, and keeps your tokens in a vault you control. Compare the two.",
+        "intro": "Microsoft Authenticator is built first for the Microsoft world: push approvals for Entra ID and Microsoft accounts, passwordless sign-in, and cloud backup tied to your Microsoft account. It also generates standard TOTP codes, which is where it overlaps with Tokn. The difference is who holds your data: Microsoft Authenticator is closed source with no way to export your tokens, while Tokn keeps them in an encrypted vault on your device, in a format you can always take with you.",
+        "toknBetter": "Tokn is open source, works without a Microsoft account or Google Play Services, and never uploads your secrets. Backups are encrypted files you control, accounts can be sorted into groups with custom icons, and moving to a new phone happens over the local network instead of through a cloud recovery flow. Microsoft Authenticator has no export at all, so with it your tokens are effectively locked in; Tokn never does that to you.",
+        "otherBetter": "If your employer uses Entra ID, Microsoft Authenticator does things Tokn cannot: push approvals with number matching, passwordless sign-in for Microsoft accounts, and compliance with workplace policies that often require it outright. For Microsoft work accounts it is the intended tool, and sometimes the mandatory one.",
+        "verdict": "This is rarely an either-or choice. Keep Microsoft Authenticator for the work accounts that require it, and put your personal TOTP codes in Tokn, where they are encrypted on your device and never locked into an account. The earlier you start, the fewer accounts you have to re-enroll later.",
+        "faq": {
+          "f1": {
+            "q": "Can I export my accounts from Microsoft Authenticator to Tokn?",
+            "a": "Microsoft Authenticator has no export. For each service, open its security settings, disable and re-enable two-factor authentication, and scan the new QR code with Tokn. Microsoft work accounts that use push approvals have to stay in Microsoft Authenticator."
+          },
+          "f2": {
+            "q": "Can I use Tokn and Microsoft Authenticator side by side?",
+            "a": "Yes, that is the usual setup. Microsoft Authenticator handles the work account your employer manages, Tokn holds your personal codes. The two apps do not interfere with each other."
+          },
+          "f3": {
+            "q": "Does Tokn support push approvals like Microsoft Authenticator?",
+            "a": "No. Push approvals are a proprietary Microsoft feature tied to their cloud. Tokn generates standard TOTP and HOTP codes, which work with any service that supports authenticator apps, including Microsoft accounts."
+          }
+        }
+      }
     }
   },
   "Faq": {

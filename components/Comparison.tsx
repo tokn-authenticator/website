@@ -1,8 +1,9 @@
 import { Check, Minus, X, GitCompareArrows } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { comparison, comparisonApps, type Cell, type ComparisonRow } from "@/lib/site";
+import { Link } from "@/i18n/navigation";
+import { comparison, comparisonApps, competitors, type Cell, type ComparisonRow } from "@/lib/site";
 
-const shortNames = ["Tokn", "Aegis", "GAuth", "2FAS", "Stratum", "Authy"];
+const shortNames = ["Tokn", "Aegis", "GAuth", "MSAuth", "Stratum", "Authy"];
 
 const cellNode: Record<Cell, React.ReactNode> = {
   yes: <Check className="h-[18px] w-[18px] text-primary" />,
@@ -11,11 +12,12 @@ const cellNode: Record<Cell, React.ReactNode> = {
 };
 
 function rowCells(row: ComparisonRow): Cell[] {
-  return [row.tokn, row.aegis, row.googleAuth, row.twofas, row.stratum, row.authy];
+  return [row.tokn, row.aegis, row.googleAuth, row.microsoftAuth, row.stratum, row.authy];
 }
 
 export function Comparison() {
   const t = useTranslations("Comparison");
+  const tVs = useTranslations("Vs");
 
   const cellLabel: Record<Cell, string> = {
     yes: t("yes"),
@@ -113,11 +115,25 @@ export function Comparison() {
         <span className="inline-flex items-center gap-1.5">
           <X className="h-4 w-4 text-border-strong" /> {t("legendNo")}
         </span>
+        <span className="sm:ml-auto">{t("asOf")}</span>
       </div>
 
       <p className="mt-8 max-w-3xl text-pretty leading-relaxed text-muted">
         {t("summary")}
       </p>
+
+      <p className="mt-8 text-sm font-medium">{t("deepDive")}</p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {competitors.map((c) => (
+          <Link
+            key={c.slug}
+            href={`/vs/${c.slug}`}
+            className="rounded-full border border-border px-4 py-2 text-sm text-muted transition hover:border-border-strong hover:bg-surface-2 hover:text-text"
+          >
+            {tVs("title", { app: c.name })}
+          </Link>
+        ))}
+      </div>
     </section>
   );
 }

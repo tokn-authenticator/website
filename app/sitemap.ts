@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { site } from "@/lib/site";
+import { site, competitors } from "@/lib/site";
 import { routing } from "@/i18n/routing";
 import { localizedPath } from "@/lib/meta";
 
@@ -7,7 +7,12 @@ export const dynamic = "force-static";
 
 const pages = [
   { path: "/", changeFrequency: "monthly" as const, priority: 1 },
-  { path: "/privacy", changeFrequency: "monthly" as const, priority: 0.3 },
+  { path: "/privacy", changeFrequency: "monthly" as const, priority: 0.4 },
+  ...competitors.map((c) => ({
+    path: `/vs/${c.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  })),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
