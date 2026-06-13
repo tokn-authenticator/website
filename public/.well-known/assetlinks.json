@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "me.diamondforge.tokn",
+      "sha256_cert_fingerprints": [
+        "DB:62:43:5B:6C:09:E0:1A:60:D7:3B:26:C6:E9:BE:0F:05:E8:59:8A:F1:74:56:D4:B4:DF:45:30:F4:D3:5F:93"
+      ]
+    }
+  }
+]
