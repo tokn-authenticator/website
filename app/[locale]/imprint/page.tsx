@@ -24,7 +24,7 @@ export async function generateMetadata({
 }
 
 const link = "font-medium text-primary underline-offset-4 hover:underline";
-const label = "font-mono text-sm uppercase tracking-widest text-muted";
+const label = "font-medium text-sm uppercase tracking-widest text-muted";
 
 export default function Imprint({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = use(params);
@@ -54,10 +54,10 @@ export default function Imprint({ params }: { params: Promise<{ locale: string }
         </Link>
 
         <h1 className="mt-6 text-balance text-4xl font-bold">{t("title")}</h1>
-        <p className="mt-3 font-mono text-sm text-muted">{t("law")}</p>
+        <p className="mt-3 font-medium text-sm text-muted">{t("law")}</p>
 
         <div className="mt-8 rounded-2xl border border-border bg-surface p-6">
-          <p className="font-mono text-sm uppercase tracking-widest text-primary">{t("noticeLabel")}</p>
+          <p className="font-medium text-sm uppercase tracking-widest text-primary">{t("noticeLabel")}</p>
           <p className="mt-3 text-pretty leading-relaxed text-muted">
             {t("noticePre")}
             <span className="font-medium text-text">{t("noticeStrong")}</span>

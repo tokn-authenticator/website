@@ -95,7 +95,7 @@ export default function Privacy({ params }: { params: Promise<{ locale: string }
         </Link>
 
         <h1 className="mt-6 text-balance text-4xl font-bold">{t("title")}</h1>
-        <p className="mt-3 font-mono text-sm text-muted">{t("effective")}</p>
+        <p className="mt-3 font-medium text-sm text-muted">{t("effective")}</p>
 
         <p className="mt-8 text-pretty text-lg leading-relaxed text-muted">{t("intro")}</p>
 

@@ -125,7 +125,7 @@ export default async function VsPage({
       <main>
         <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-14 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-20 lg:pt-20">
           <div className="text-center lg:text-left">
-            <p className="flex items-center justify-center gap-2 font-mono text-sm uppercase tracking-widest text-primary lg:justify-start">
+            <p className="flex items-center justify-center gap-2 font-medium text-sm uppercase tracking-widest text-primary lg:justify-start">
               <GitCompareArrows className="h-4 w-4" /> {t("eyebrow")}
             </p>
             <h1 className="mt-4 text-balance text-4xl font-bold leading-[1.04] sm:text-5xl">
@@ -172,7 +172,7 @@ export default async function VsPage({
 
         <section className="mx-auto max-w-3xl px-5 py-12 sm:px-8 sm:py-16">
           <div className="text-center">
-            <p className="font-mono text-sm uppercase tracking-widest text-primary">FAQ</p>
+            <p className="font-medium text-sm uppercase tracking-widest text-primary">FAQ</p>
             <h2 className="mt-3 text-balance text-3xl font-bold sm:text-4xl">{t("faqHeading")}</h2>
           </div>
           <div className="mt-10 divide-y divide-border overflow-hidden rounded-3xl border border-border bg-surface">

@@ -28,7 +28,7 @@ export function Comparison() {
   return (
     <section id="compare" className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
       <div className="max-w-2xl">
-        <p className="flex items-center gap-2 font-mono text-sm uppercase tracking-widest text-primary">
+        <p className="flex items-center gap-2 font-medium text-sm uppercase tracking-widest text-primary">
           <GitCompareArrows className="h-4 w-4" /> {t("eyebrow")}
         </p>
         <h2 className="mt-3 text-balance text-3xl font-bold sm:text-4xl">

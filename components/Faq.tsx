@@ -53,7 +53,7 @@ export function Faq() {
   return (
     <section id="faq" className="mx-auto max-w-3xl px-5 py-20 sm:px-8 sm:py-28">
       <div className="text-center">
-        <p className="font-mono text-sm uppercase tracking-widest text-primary">{t("eyebrow")}</p>
+        <p className="font-medium text-sm uppercase tracking-widest text-primary">{t("eyebrow")}</p>
         <h2 className="mt-3 text-balance text-3xl font-bold sm:text-4xl">
           {t("heading")}
         </h2>

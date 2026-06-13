@@ -17,7 +17,7 @@ export function Security() {
       <div className="overflow-hidden rounded-[2rem] border border-border bg-surface-2">
         <div className="grid items-center gap-10 p-7 sm:p-10 lg:grid-cols-2 lg:gap-6">
           <div>
-            <p className="flex items-center gap-2 font-mono text-sm uppercase tracking-widest text-primary">
+            <p className="flex items-center gap-2 font-medium text-sm uppercase tracking-widest text-primary">
               <ShieldCheck className="h-4 w-4" /> {t("eyebrow")}
             </p>
             <h2 className="mt-3 text-balance text-3xl font-bold sm:text-4xl">
