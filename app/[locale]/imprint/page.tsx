@@ -81,6 +81,11 @@ export default function Imprint({ params }: { params: Promise<{ locale: string }
             </p>
           </div>
         </div>
+
+        <div className="mt-6 rounded-2xl border border-border bg-surface p-6">
+          <p className={label}>{t("disputeLabel")}</p>
+          <p className="mt-3 text-pretty leading-relaxed text-muted">{t("disputeText")}</p>
+        </div>
       </main>
 
       <Footer />

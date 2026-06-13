@@ -3,7 +3,7 @@
     "siteName": "Tokn",
     "tagline": "Deine 2FA-Codes. Offline.",
     "title": "Tokn - deine 2FA-Codes, offline",
-    "description": "Tokn ist ein kostenloser Open-Source-Authenticator für Android. Deine Einmalcodes bleiben verschlüsselt auf dem Handy. Kein Konto, keine Cloud, kein Tracking.",
+    "description": "Tokn ist ein kostenloser Open-Source-Authenticator für Android. Deine Einmalcodes bleiben verschlüsselt auf dem Handy. Kein Konto, keine Cloud, keine Telemetrie.",
     "ogImageAlt": "Tokn - kostenloser Open-Source-Authenticator für Android, offline",
     "privacyTitle": "Datenschutz",
     "privacyDescription": "Die App sammelt nichts: kein Konto, keine Telemetrie. Die Website nutzt anonyme Statistik auf eigenem Server, ohne Cookies.",
@@ -27,7 +27,7 @@
     "badge": "Open Source, GPL-3.0",
     "titleLine1": "Deine 2FA-Codes.",
     "titleLine2": "Offline.",
-    "lead": "Tokn ist ein kostenloser Open-Source-Authenticator für Android. Deine Einmalcodes bleiben verschlüsselt auf dem Handy. Kein Konto, keine Cloud, kein Tracking.",
+    "lead": "Tokn ist ein kostenloser Open-Source-Authenticator für Android. Deine Einmalcodes bleiben verschlüsselt auf dem Handy. Kein Konto, keine Cloud, keine Telemetrie.",
     "subnote": "TOTP- und HOTP-Codes, offline erzeugt auf Android. Kein Konto steht zwischen dir und deiner 2FA.",
     "screenshotAlt": "Tokn-Tresor auf Android"
   },
@@ -383,6 +383,8 @@
   "Privacy": {
     "title": "Datenschutz",
     "effective": "Gültig ab 2026-06-06",
+    "controllerHeading": "Verantwortlicher",
+    "controllerText": "Verantwortlicher für die hier beschriebene Verarbeitung ist der im Impressum genannte Betreiber; dort findest du auch die Kontaktdaten.",
     "intro": "Diese Erklärung gilt für die Tokn-App und diese Website. Tokn ist ein kostenloses Angebot von DiamondForge Labs (dem „Anbieter“), bereitgestellt wie es ist. Die App ist so gebaut, dass es nichts zu sammeln gibt. Die Website nutzt anonyme Statistik auf einem eigenen Server.",
     "appHeading": "Was die App sammelt",
     "appIntro": "Die App holt sich keine Daten, wenn du sie herunterlädst und benutzt. Es braucht keine Registrierung und kein Konto.",
@@ -406,6 +408,8 @@
     "siteHeading": "Diese Website",
     "siteAnalyticsTitle": "Anonyme Statistik.",
     "siteAnalyticsText": "Diese Seite nutzt Umami, ein Statistik-Tool ohne Cookies, das auf unserem eigenen Server unter analytics.diamondforge.me läuft. Es zählt anonyme Eckdaten wie Seitenaufrufe und Verweisquellen. Es setzt keine Cookies, legt kein Profil über dich an, und deine Daten werden nie verkauft oder an Werbetreibende weitergegeben. Keine Sitzungsaufzeichnung, kein seitenübergreifendes Tracking.",
+    "siteAnalyticsLegalTitle": "Rechtsgrundlage, IP und Speicherdauer.",
+    "siteAnalyticsLegalText": "Wir verarbeiten diese Daten auf Grundlage unseres berechtigten Interesses an einer Reichweitenmessung (Art. 6 Abs. 1 lit. f DSGVO). Umami speichert deine rohe IP-Adresse nicht, sondern bildet daraus über einen wechselnden Hash eine anonyme Kennung, sodass sich Besuche nicht auf dich zurückführen lassen. Diese aggregierten Eckdaten bewahren wir nur so lange auf, wie sie für diesen Zweck nützlich sind, und verknüpfen sie mit keinen weiteren Daten.",
     "siteFontsTitle": "Eigene Schriften.",
     "siteFontsText": "Schriften kommen von der Seite selbst, nicht von einem Dritten.",
     "siteLinksTitle": "Ausgehende Links.",
@@ -413,11 +417,13 @@
     "thirdPartiesHeading": "Dritte",
     "thirdPartiesText": "Die App sammelt nichts, also wird auch nichts über die App an Dritte weitergegeben. Die Website-Statistik läuft auf unserem eigenen Server, die Besuchsdaten gehen also an keinen externen Anbieter.",
     "optOutHeading": "Dein Widerspruch",
-    "optOutText": "Die Erfassung durch die App stoppst du, indem du sie deinstallierst, über den normalen Weg auf deinem Gerät oder dem Store, aus dem du sie hast. Auf der Website blockierst du die Statistik über deine Browser-Einstellungen, einen Content-Blocker oder ein Do-Not-Track-Signal.",
+    "optOutText": "Die App sammelt nichts, also gibt es nichts, dem du widersprechen oder das du löschen könntest. Die Website-Statistik blockierst du über deine Browser-Einstellungen, einen Content-Blocker oder ein Do-Not-Track-Signal.",
+    "rightsHeading": "Deine Rechte",
+    "rightsText": "Da die Website-Statistik anonym ist und die App auf unserer Seite nichts speichert, gibt es in der Regel keine personenbezogenen Daten, zu denen wir dir Auskunft geben oder die wir berichtigen oder löschen könnten. Soweit das Datenschutzrecht dennoch greift, hast du die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung und Widerspruch, und du kannst dich bei einer Aufsichtsbehörde beschweren, für uns das Bayerische Landesamt für Datenschutzaufsicht (BayLDA).",
     "childrenHeading": "Kinder",
-    "childrenText1": "Die App wird nicht genutzt, um wissentlich Daten von Kindern unter 13 Jahren zu erheben oder an sie zu vermarkten. Der Anbieter erhebt wissentlich keine personenbezogenen Daten von Kindern und bittet alle Kinder, niemals personenbezogene Daten über die App anzugeben. Eltern und Erziehungsberechtigte sollten die Internetnutzung ihrer Kinder im Blick behalten und ihnen klarmachen, dass sie ohne Erlaubnis niemals personenbezogene Daten über die App angeben.",
-    "childrenText2Pre": "Wenn du denkst, dass ein Kind dem Anbieter über die App personenbezogene Daten geschickt hat, melde dich bitte unter ",
-    "childrenText2Post": ", damit wir das Nötige veranlassen können. Außerdem musst du in deinem Land mindestens 16 Jahre alt sein, um der Verarbeitung deiner personenbezogenen Daten zuzustimmen (in manchen Ländern dürfen das deine Eltern oder Erziehungsberechtigten für dich tun).",
+    "childrenText1": "Tokn richtet sich nicht an Kinder, und es gibt für ein Kind, oder sonst jemanden, auch nichts anzugeben: Die App hat kein Konto, keine Formulare und keinen Server, also lassen sich keine personenbezogenen Daten über sie übermitteln. Die Website hält nur anonyme Eckdaten.",
+    "childrenText2Pre": "Wenn du dazu Fragen hast, melde dich unter ",
+    "childrenText2Post": ".",
     "securityHeading": "Sicherheit",
     "securityText": "Dem Anbieter ist die Vertraulichkeit deiner Daten wichtig. Die App sammelt nichts, und die Website hält nur anonyme Eckdaten, es gibt also keinen Speicher mit personenbezogenen Daten, der offengelegt werden könnte.",
     "changesHeading": "Änderungen",
@@ -438,6 +444,8 @@
     "noticeStrong": "nicht-kommerziell und ohne Gewinnabsicht",
     "noticePost": " betrieben. Es werden keine Gebühren erhoben, keine Einnahmen erzielt und keine wie auch immer geartete Vergütung im Zusammenhang mit diesem Projekt erhalten. Es entsteht und wird gepflegt als privates Hobbyprojekt, ohne kommerzielle Absicht.",
     "contactLabel": "Kontakt",
-    "emailLabel": "E-Mail"
+    "emailLabel": "E-Mail",
+    "disputeLabel": "Streitbeilegung",
+    "disputeText": "Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
   }
 }

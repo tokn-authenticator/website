@@ -99,6 +99,9 @@ export default function Privacy({ params }: { params: Promise<{ locale: string }
 
         <p className="mt-8 text-pretty text-lg leading-relaxed text-muted">{t("intro")}</p>
 
+        <h2 className={h2}>{t("controllerHeading")}</h2>
+        <p className={p}>{t("controllerText")}</p>
+
         <h2 className={h2}>{t("appHeading")}</h2>
         <p className={p}>{t("appIntro")}</p>
         <ul className="mt-4 space-y-3 pl-5 [list-style:disc]">
@@ -146,6 +149,10 @@ export default function Privacy({ params }: { params: Promise<{ locale: string }
           {t("siteAnalyticsText")}
         </p>
         <p className={p}>
+          <span className="font-medium text-text">{t("siteAnalyticsLegalTitle")}</span>{" "}
+          {t("siteAnalyticsLegalText")}
+        </p>
+        <p className={p}>
           <span className="font-medium text-text">{t("siteFontsTitle")}</span> {t("siteFontsText")}
         </p>
         <p className={p}>
@@ -157,6 +164,9 @@ export default function Privacy({ params }: { params: Promise<{ locale: string }
 
         <h2 className={h2}>{t("optOutHeading")}</h2>
         <p className={p}>{t("optOutText")}</p>
+
+        <h2 className={h2}>{t("rightsHeading")}</h2>
+        <p className={p}>{t("rightsText")}</p>
 
         <h2 className={h2}>{t("childrenHeading")}</h2>
         <p className={p}>{t("childrenText1")}</p>
