@@ -177,7 +177,7 @@
     "tableHeading": "Feature by feature",
     "tableCaption": "Feature comparison of Tokn and {app}",
     "toknHeading": "Where Tokn pulls ahead",
-    "otherHeading": "Where {app} has the edge",
+    "otherHeading": "Where {app} is better",
     "verdictHeading": "Bottom line",
     "faqHeading": "Common questions",
     "othersHeading": "More comparisons",
@@ -297,7 +297,7 @@
         "metaDescription": "Microsoft Authenticator backs up your codes to a Microsoft account and offers no export. Tokn is open source, offline, and keeps your tokens in a vault you control. Compare the two.",
         "intro": "Microsoft Authenticator is built first for the Microsoft world: push approvals for Entra ID and Microsoft accounts, passwordless sign-in, and cloud backup tied to your Microsoft account. It also generates standard TOTP codes, which is where it overlaps with Tokn. The difference is who holds your data: Microsoft Authenticator is closed source with no way to export your tokens, while Tokn keeps them in an encrypted vault on your device, in a format you can always take with you.",
         "toknBetter": "Tokn is open source, works without a Microsoft account or Google Play Services, and never uploads your secrets. Backups are encrypted files you control, accounts can be sorted into groups with custom icons, and moving to a new phone happens over the local network instead of through a cloud recovery flow. Microsoft Authenticator has no export at all, so with it your tokens are effectively locked in; Tokn never does that to you.",
-        "otherBetter": "If your employer uses Entra ID, Microsoft Authenticator does things Tokn cannot: push approvals with number matching, passwordless sign-in for Microsoft accounts, and compliance with workplace policies that often require it outright. For Microsoft work accounts it is the intended tool, and sometimes the mandatory one.",
+        "otherBetter": "If you or your employer uses Entra ID, Microsoft Authenticator does things Tokn cannot: push approvals with number matching, passwordless sign-in for Microsoft accounts, and compliance with workplace policies that often require it outright. For Microsoft work accounts it is the intended tool, and sometimes the mandatory one.",
         "verdict": "This is rarely an either-or choice. Keep Microsoft Authenticator for the work accounts that require it, and put your personal TOTP codes in Tokn, where they are encrypted on your device and never locked into an account. The earlier you start, the fewer accounts you have to re-enroll later.",
         "faq": {
           "f1": {
