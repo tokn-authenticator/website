@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "types:check": "tsc --noEmit",
-    "images:optimize": "node scripts/optimize-screens.mjs"
+    "images:optimize": "node scripts/optimize-screens.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",
