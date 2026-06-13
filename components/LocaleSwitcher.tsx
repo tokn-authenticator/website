@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import { Languages, Check, ChevronDown } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
@@ -12,9 +12,24 @@ export function LocaleSwitcher({ className = "" }: { className?: string }) {
   const router = useRouter();
   const t = useTranslations("Nav");
   const [open, setOpen] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const ref = useRef<HTMLDivElement>(null);
+  const finishTransition = useRef<(() => void) | null>(null);
+
+  useEffect(() => {
+    if (!isPending && finishTransition.current) {
+      finishTransition.current();
+      finishTransition.current = null;
+    }
+  }, [isPending]);
 
   const labelFor = (l: string) => (l === "de" ? t("german") : t("english"));
+
+  useEffect(() => {
+    for (const l of routing.locales) {
+      if (l !== locale) router.prefetch(pathname, { locale: l });
+    }
+  }, [locale, pathname, router]);
 
   useEffect(() => {
     if (!open) return;
@@ -34,7 +49,31 @@ export function LocaleSwitcher({ className = "" }: { className?: string }) {
 
   const select = (l: string) => {
     setOpen(false);
-    if (l !== locale) router.replace(pathname, { locale: l });
+    if (l === locale) return;
+
+    const navigate = () =>
+      startTransition(() => {
+        router.replace(pathname, { locale: l, scroll: false });
+      });
+
+    if (typeof document === "undefined" || !document.startViewTransition) {
+      navigate();
+      return;
+    }
+
+    document.startViewTransition(
+      () =>
+        new Promise<void>((resolve) => {
+          finishTransition.current = resolve;
+          navigate();
+          setTimeout(() => {
+            if (finishTransition.current) {
+              finishTransition.current = null;
+              resolve();
+            }
+          }, 600);
+        }),
+    );
   };
 
   return (
@@ -44,8 +83,11 @@ export function LocaleSwitcher({ className = "" }: { className?: string }) {
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="menu"
         aria-expanded={open}
+        aria-busy={isPending}
         aria-label={`${t("language")}: ${labelFor(locale)}`}
-        className="inline-flex h-10 items-center gap-1.5 rounded-full border border-border bg-surface pl-3 pr-2.5 text-sm font-semibold text-muted transition hover:border-border-strong hover:text-text"
+        className={`inline-flex h-10 items-center gap-1.5 rounded-full border border-border bg-surface pl-3 pr-2.5 text-sm font-semibold text-muted transition hover:border-border-strong hover:text-text ${
+          isPending ? "opacity-60" : ""
+        }`}
       >
         <Languages className="h-[18px] w-[18px]" />
         <span className="uppercase">{locale}</span>

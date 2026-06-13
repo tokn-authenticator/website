@@ -2,8 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import "../globals.css";
-import { ThemeProvider } from "../providers";
+import { HtmlLang } from "@/components/HtmlLang";
 import { routing } from "@/i18n/routing";
 import { site } from "@/lib/site";
 import { languageAlternates, localizedPath, ogLocale } from "@/lib/meta";
@@ -33,24 +32,15 @@ export async function generateMetadata({
       "two-factor authentication",
       "MFA",
       "TOTP",
-      "HOTP",
       "authenticator app",
-      "open source",
-      "Android",
-      "F-Droid",
+      "open source authenticator",
       "offline",
       "privacy",
-      "Aegis alternative",
-      "Ente Auth alternative",
-      "Stratum alternative",
-      "Authy alternative",
-      "Google Authenticator alternative",
-      "Microsoft Authenticator alternative",
-      "open source authenticator",
-      "Authenticator App offline",
-      "2FA App ohne Cloud",
-      "TOTP App Open Source",
-      "Authenticator ohne Google",
+      "Android",
+      "F-Droid",
+      "Zwei-Faktor-Authentifizierung",
+      "kostenlose Authenticator App",
+      "DSGVO konform",
     ],
     authors: [{ name: "DiamondForge Labs", url: site.links.github }],
     creator: "DiamondForge Labs",
@@ -118,12 +108,9 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className="min-h-dvh">
-        <NextIntlClientProvider>
-          <ThemeProvider>{children}</ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider>
+      <HtmlLang locale={locale} />
+      {children}
+    </NextIntlClientProvider>
   );
 }

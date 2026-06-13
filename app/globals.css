@@ -90,11 +90,28 @@
   font-feature-settings: "tnum" 1;
 }
 
+::view-transition-old(root) {
+  animation: vt-fade-out 0.18s ease both;
+}
+::view-transition-new(root) {
+  animation: vt-fade-in 0.32s ease both;
+}
+@keyframes vt-fade-out {
+  to { opacity: 0; }
+}
+@keyframes vt-fade-in {
+  from { opacity: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
   }
 }
