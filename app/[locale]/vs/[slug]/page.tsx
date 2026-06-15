@@ -12,7 +12,7 @@ import { Screenshot } from "@/components/Screenshot";
 import { StoreButtons } from "@/components/StoreButtons";
 import { VsTable } from "@/components/VsTable";
 import { site, competitors } from "@/lib/site";
-import { languageAlternates, localizedPath } from "@/lib/meta";
+import { absoluteUrl, languageAlternates } from "@/lib/meta";
 
 export const dynamicParams = false;
 
@@ -36,7 +36,7 @@ export async function generateMetadata({
     title: { absolute: t(`apps.${competitor.key}.metaTitle`) },
     description: t(`apps.${competitor.key}.metaDescription`),
     alternates: {
-      canonical: localizedPath(locale, path),
+      canonical: absoluteUrl(locale, path),
       languages: languageAlternates(path),
     },
   };
@@ -58,8 +58,8 @@ export default async function VsPage({
 
   const app = (key: string) => t(`apps.${competitor.key}.${key}`);
   const title = t("title", { app: competitor.name });
-  const home = `${site.url}${localizedPath(locale, "/")}`;
-  const here = `${site.url}${localizedPath(locale, `/vs/${slug}`)}`;
+  const home = absoluteUrl(locale, "/");
+  const here = absoluteUrl(locale, `/vs/${slug}`);
   const others = competitors.filter((c) => c.slug !== slug);
 
   const jsonLd = {

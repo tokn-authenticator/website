@@ -9,11 +9,11 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
 import { RevealEmail } from "@/components/RevealEmail";
 import { site } from "@/lib/site";
-import { languageAlternates, localizedPath } from "@/lib/meta";
+import { absoluteUrl, languageAlternates } from "@/lib/meta";
 
 function PrivacyJsonLd({ locale, title }: { locale: string; title: string }) {
-  const home = `${site.url}${localizedPath(locale, "/")}`;
-  const here = `${site.url}${localizedPath(locale, "/privacy")}`;
+  const home = absoluteUrl(locale, "/");
+  const here = absoluteUrl(locale, "/privacy");
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -55,7 +55,7 @@ export async function generateMetadata({
     title: t("privacyTitle"),
     description: t("privacyDescription"),
     alternates: {
-      canonical: localizedPath(locale, "/privacy"),
+      canonical: absoluteUrl(locale, "/privacy"),
       languages: languageAlternates("/privacy"),
     },
   };

@@ -5,7 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { HtmlLang } from "@/components/HtmlLang";
 import { routing } from "@/i18n/routing";
 import { site } from "@/lib/site";
-import { languageAlternates, localizedPath, ogLocale } from "@/lib/meta";
+import { absoluteUrl, languageAlternates, ogLocale } from "@/lib/meta";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -59,12 +59,12 @@ export async function generateMetadata({
     },
     formatDetection: { telephone: false, email: false, address: false },
     alternates: {
-      canonical: localizedPath(locale, "/"),
+      canonical: absoluteUrl(locale, "/"),
       languages: languageAlternates("/"),
     },
     openGraph: {
       type: "website",
-      url: localizedPath(locale, "/"),
+      url: absoluteUrl(locale, "/"),
       title: t("title"),
       description: t("description"),
       siteName: "Tokn",

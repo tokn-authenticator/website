@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
-import { site, competitors } from "@/lib/site";
+import { competitors } from "@/lib/site";
 import { routing } from "@/i18n/routing";
-import { localizedPath } from "@/lib/meta";
+import { absoluteUrl } from "@/lib/meta";
 
 export const dynamic = "force-static";
 
@@ -21,12 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const { path, changeFrequency, priority } of pages) {
     const languages = Object.fromEntries(
-      routing.locales.map((locale) => [locale, `${site.url}${localizedPath(locale, path)}`]),
+      routing.locales.map((locale) => [locale, absoluteUrl(locale, path)]),
     );
 
     for (const locale of routing.locales) {
       entries.push({
-        url: `${site.url}${localizedPath(locale, path)}`,
+        url: absoluteUrl(locale, path),
         lastModified,
         changeFrequency,
         priority,

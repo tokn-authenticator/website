@@ -25,8 +25,8 @@
   },
   "Hero": {
     "badge": "Open source, GPL-3.0",
-    "titleLine1": "Your 2FA codes.",
-    "titleLine2": "Offline.",
+    "titleLine1": "Your 2FA authenticator for Android.",
+    "titleLine2": "Privacy-first.",
     "lead": "Tokn is a free, open-source authenticator for Android. Your one-time codes stay on your device, encrypted. No account, no cloud, no telemetry.",
     "subnote": "TOTP and HOTP codes, generated offline on Android. No account stands between you and your 2FA.",
     "screenshotAlt": "Tokn vault on Android"

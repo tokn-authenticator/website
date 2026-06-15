@@ -11,7 +11,7 @@ import { Faq } from "@/components/Faq";
 import { CtaBand } from "@/components/CtaBand";
 import { Footer } from "@/components/Footer";
 import { site, faqs, features } from "@/lib/site";
-import { localizedPath } from "@/lib/meta";
+import { absoluteUrl } from "@/lib/meta";
 
 const orgId = `${site.url}/#org`;
 
@@ -27,8 +27,8 @@ export default async function Home({
   const tFeatures = await getTranslations({ locale, namespace: "Features" });
   const tFaq = await getTranslations({ locale, namespace: "Faq" });
 
-  const url = `${site.url}${localizedPath(locale, "/")}`;
-  const screenshots = features.map((f) => `${site.url}/screens/light/${f.shot}.png`);
+  const url = absoluteUrl(locale, "/");
+  const screenshots = features.map((f) => `${site.url}/screens/light/${f.shot}.webp`);
 
   const jsonLd = {
     "@context": "https://schema.org",
