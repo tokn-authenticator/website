@@ -15,7 +15,7 @@ export function GET() {
     .join("\n");
 
   const comparisons = competitors
-    .map((c) => `- [Tokn vs ${c.name}](${site.url}/vs/${c.slug})`)
+    .map((c) => `- [Tokn vs ${c.name} (${c.name} alternative)](${site.url}/vs/${c.slug})`)
     .join("\n");
 
   const faqList = faqs
@@ -30,6 +30,7 @@ export function GET() {
 - Platform: Android 8.0 or later, installable from Google Play and F-Droid.
 - License: GPL-3.0, open source. Source on GitHub.
 - Privacy: fully offline. Codes never leave the device. No accounts, no cloud, no telemetry, no Google Play Services.
+- Positioning: an open-source alternative to Authy, Google Authenticator, and Microsoft Authenticator, in the same spirit as Aegis Authenticator, 2FAS, and Stratum. Imports backups from Aegis, 2FAS, Stratum, and Google Authenticator directly.
 - Maintainer: DiamondForge Labs. Lead: fthomys on GitHub.
 
 ## Features

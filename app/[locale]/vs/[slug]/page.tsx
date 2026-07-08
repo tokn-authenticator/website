@@ -20,7 +20,7 @@ export function generateStaticParams() {
   return competitors.map((c) => ({ slug: c.slug }));
 }
 
-const faqIds = ["f1", "f2", "f3"] as const;
+const faqIds = ["f1", "f2", "f3", "f4"] as const;
 
 export async function generateMetadata({
   params,
