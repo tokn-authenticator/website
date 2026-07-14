@@ -28,7 +28,9 @@ export default async function Home({
   const tFaq = await getTranslations({ locale, namespace: "Faq" });
 
   const url = absoluteUrl(locale, "/");
-  const screenshots = features.map((f) => `${site.url}/screens/light/${f.shot}.webp`);
+  const screenshots = features
+    .filter((f) => f.shot)
+    .map((f) => `${site.url}/screens/light/${f.shot}.webp`);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -82,6 +84,8 @@ export default async function Home({
           "F-Droid",
           "encrypted",
           "no cloud",
+          "audit log",
+          "recycle bin",
           "Aegis alternative",
           "Authy alternative",
           "Google Authenticator alternative",

@@ -22,8 +22,9 @@ export const principles: { id: string; icon: PrincipleIcon }[] = [
   { id: "oss", icon: "git" },
 ];
 
-// `shot` is the screenshot base name under /public/screens/{theme}/.
-export type Feature = { id: string; icon: string; shot: string };
+// `shot` is the screenshot base name under /public/screens/{theme}/. Optional
+// for features that don't have a dedicated screenshot yet.
+export type Feature = { id: string; icon: string; shot?: string };
 export const features: Feature[] = [
   { id: "vault", icon: "lock-keyhole", shot: "security-enabled" },
   { id: "sync", icon: "refresh-cw", shot: "sync-methods" },
@@ -31,6 +32,8 @@ export const features: Feature[] = [
   { id: "import", icon: "download", shot: "import-source-picker" },
   { id: "groups", icon: "folder-tree", shot: "vault-home" },
   { id: "material", icon: "palette", shot: "appearance-settings" },
+  { id: "auditLog", icon: "history" },
+  { id: "recycleBin", icon: "trash-2" },
 ];
 
 // `name` is a brand and stays untranslated; the note is translated.

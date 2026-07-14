@@ -83,6 +83,14 @@
       "title": "Material You Expressive",
       "text": "Material 3 Expressive design with light, dark, or system themes and optional dynamic color.",
       "alt": "Appearance settings with theme options"
+    },
+    "auditLog": {
+      "title": "Audit log",
+      "text": "Every vault unlock, account change, and settings tweak gets a timestamped entry. Filter by category, search, or date, and set your own retention period."
+    },
+    "recycleBin": {
+      "title": "Recycle bin",
+      "text": "Optional and on by default: deleted accounts wait 30 days in case you change your mind, or hit \"delete immediately\" and skip the wait entirely."
     }
   },
   "Security": {

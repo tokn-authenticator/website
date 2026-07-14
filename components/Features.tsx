@@ -5,6 +5,8 @@ import {
   Download,
   FolderTree,
   Palette,
+  History,
+  Trash2,
   type LucideIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -18,6 +20,8 @@ const icons: Record<string, LucideIcon> = {
   download: Download,
   "folder-tree": FolderTree,
   palette: Palette,
+  history: History,
+  "trash-2": Trash2,
 };
 
 export function Features() {

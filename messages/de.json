@@ -83,6 +83,14 @@
       "title": "Material You Expressive",
       "text": "Material-3-Expressive Design in Hell, Dunkel oder nach System, optional mit dynamischen Farben.",
       "alt": "Darstellungseinstellungen mit Themenoptionen"
+    },
+    "auditLog": {
+      "title": "Audit-Log",
+      "text": "Jede Tresor-Entsperrung, Kontoänderung und Einstellungsänderung wird mit Zeitstempel protokolliert. Filtere nach Kategorie, Suche oder Datum und leg deine eigene Aufbewahrungsfrist fest."
+    },
+    "recycleBin": {
+      "title": "Papierkorb",
+      "text": "Optional und standardmäßig an: Gelöschte Konten warten 30 Tage, falls du es dir anders überlegst, oder du tippst auf „Sofort löschen“ und überspringst die Wartezeit."
     }
   },
   "Security": {
