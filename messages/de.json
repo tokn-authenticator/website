@@ -612,7 +612,7 @@
     },
     "bug": {
       "q": "Wo melde ich einen Bug?",
-      "a": "Mach ein Issue im GitHub-Tracker auf: github.com/fthomys/tokn/issues. Schreib dazu, welche Android-Version du hast, wie man den Fehler auslöst und was du erwartet hättest. Ohne GitHub geht es auch per Mail: __EMAIL__"
+      "a": "Mach ein Issue im GitHub-Tracker auf: github.com/tokn-authenticator/tokn/issues. Schreib dazu, welche Android-Version du hast, wie man den Fehler auslöst und was du erwartet hättest. Ohne GitHub geht es auch per Mail: __EMAIL__"
     }
   },
   "Cta": {

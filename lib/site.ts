@@ -5,10 +5,10 @@ export const site = {
   links: {
     play: "https://play.google.com/store/apps/details?id=me.diamondforge.tokn",
     fdroid: "https://f-droid.org/app/me.diamondforge.tokn",
-    github: "https://github.com/fthomys/tokn",
-    releases: "https://github.com/fthomys/tokn/releases",
-    issues: "https://github.com/fthomys/tokn/issues",
-    license: "https://github.com/fthomys/tokn/blob/main/LICENSE",
+    github: "https://github.com/tokn-authenticator/tokn",
+    releases: "https://github.com/tokn-authenticator/tokn/releases",
+    issues: "https://github.com/tokn-authenticator/tokn/issues",
+    license: "https://github.com/tokn-authenticator/tokn/blob/main/LICENSE",
   },
 };
 

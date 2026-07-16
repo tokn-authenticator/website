@@ -612,7 +612,7 @@
     },
     "bug": {
       "q": "Where can I report a bug?",
-      "a": "Open an issue on the GitHub issue tracker at github.com/fthomys/tokn/issues. Include your Android version, how to reproduce it, and what you expected to happen. If you would rather not use GitHub, email us instead: __EMAIL__"
+      "a": "Open an issue on the GitHub issue tracker at github.com/tokn-authenticator/tokn/issues. Include your Android version, how to reproduce it, and what you expected to happen. If you would rather not use GitHub, email us instead: __EMAIL__"
     }
   },
   "Cta": {
