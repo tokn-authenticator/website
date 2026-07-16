@@ -2,7 +2,7 @@
   "Meta": {
     "siteName": "Tokn",
     "tagline": "Deine 2FA-Codes. Offline.",
-    "title": "Tokn - deine 2FA-Codes, offline",
+    "title": "Tokn - Open-Source-2FA-Authenticator, offline",
     "description": "Tokn ist ein kostenloser Open-Source-Authenticator für Android. Deine Einmalcodes bleiben verschlüsselt auf dem Handy. Kein Konto, keine Cloud, keine Telemetrie.",
     "ogImageAlt": "Tokn - kostenloser Open-Source-Authenticator für Android, offline",
     "privacyTitle": "Datenschutz",
@@ -343,6 +343,241 @@
           "f4": {
             "q": "Ist Tokn eine gute Alternative zu Microsoft Authenticator?",
             "a": "Für private TOTP-Codes ja: Open Source, offline, ohne Konto, und deine Token sind nie eingesperrt. Arbeitskonten, die Microsofts Push-Bestätigungen verlangen, müssen im Microsoft Authenticator bleiben."
+          }
+        }
+      }
+    }
+  },
+  "Guides": {
+    "eyebrow": "Umstiegs-Guide",
+    "title": "Von {app} zu Tokn wechseln",
+    "metaSuffix": "Tokn Umstiegs-Guide",
+    "stepsHeading": "Schritt für Schritt wechseln",
+    "faqHeading": "Häufige Fragen",
+    "othersHeading": "Weitere Umstiegs-Guides",
+    "compareLink": "Tokn und {app} im Feature-Vergleich",
+    "vsGuideLink": "So wechselst du von {app} zu Tokn - Schritt für Schritt",
+    "switchingLead": "Schritt-für-Schritt-Guides:",
+    "apps": {
+      "aegis": {
+        "metaTitle": "Von Aegis zu Tokn wechseln: verschlüsseltes Backup importieren",
+        "metaDescription": "Zieh deine 2FA-Token in wenigen Minuten von Aegis zu Tokn um. Verschlüsseltes Aegis-Backup exportieren, direkt importieren - ganz ohne Cloud.",
+        "intro": "Aegis und Tokn teilen dieselbe Philosophie: Open Source, offline, verschlüsselt. Das macht den Wechsel unkompliziert - Tokn liest Aegis-Backups direkt ein, auch verschlüsselte. Einmal exportieren, einmal importieren, fertig.",
+        "steps": {
+          "s1": {
+            "title": "Aegis-Tresor exportieren",
+            "body": "Öffne in Aegis die Einstellungen, dann Import & Export und wähle Exportieren. Lass die Verschlüsselung aktiviert und speichere die Backup-Datei auf deinem Gerät."
+          },
+          "s2": {
+            "title": "Tokn installieren",
+            "body": "Hol dir Tokn aus Google Play oder von F-Droid. Es gibt kein Konto - Tresor-Passwort oder Fingerabdruck festlegen und los."
+          },
+          "s3": {
+            "title": "Backup in Tokn importieren",
+            "body": "Öffne in Tokn den Import, wähle Aegis, such die Backup-Datei aus und gib dein Aegis-Passwort ein. Alle Token kommen in einem Rutsch rüber."
+          },
+          "s4": {
+            "title": "Prüfen und aufräumen",
+            "body": "Vergleiche ein paar Codes zwischen beiden Apps, erstell ein frisches verschlüsseltes Tokn-Backup und lösche danach den Aegis-Tresor und die Export-Datei."
+          }
+        },
+        "faq": {
+          "f1": {
+            "q": "Kann Tokn verschlüsselte Aegis-Backups importieren?",
+            "a": "Ja. Tokn liest Aegis-Backup-Dateien direkt ein, auch verschlüsselte. Du gibst beim Import das Passwort ein, das du in Aegis gesetzt hast - entschlüsselt wird auf deinem Gerät."
+          },
+          "f2": {
+            "q": "Kommen Icons und Gruppen mit?",
+            "a": "Deine Token kommen in einem Rutsch rüber, und Tokn versteht Icon-Packs im Aegis-Format. Danach kannst du Konten in Gruppen sortieren - auch in mehrere gleichzeitig."
+          },
+          "f3": {
+            "q": "Warum überhaupt von Aegis wechseln?",
+            "a": "Beide sind hervorragende Open-Source-Authenticator. Tokn ergänzt verschlüsselten Sync übers lokale Netzwerk für den Handywechsel - per WLAN, Wi-Fi Direct oder animiertem QR-Code - plus Material-You-Design. Details stehen im vollständigen Vergleich."
+          }
+        }
+      },
+      "googleAuth": {
+        "metaTitle": "Google Authenticator zu Tokn exportieren - per QR-Code",
+        "metaDescription": "Die Export-QR-Codes von Google Authenticator lassen sich direkt in Tokn scannen. Alle 2FA-Konten in etwa einer Minute in einen verschlüsselten Offline-Tresor umziehen.",
+        "intro": "Google Authenticator kann alle Konten als QR-Codes exportieren, und Tokn scannt diese direkt. Der ganze Umzug dauert etwa eine Minute - danach liegen deine Codes in einem verschlüsselten Tresor auf deinem Gerät statt in deinem Google-Konto.",
+        "steps": {
+          "s1": {
+            "title": "Konten exportieren",
+            "body": "Öffne in Google Authenticator das Menü, wähle Konten übertragen, dann Konten exportieren, und wähle aus, was mit soll. Die App zeigt einen oder mehrere QR-Codes."
+          },
+          "s2": {
+            "title": "Tokn installieren",
+            "body": "Hol dir Tokn aus Google Play oder von F-Droid. Es gibt kein Konto - Tresor-Passwort oder Fingerabdruck festlegen und los."
+          },
+          "s3": {
+            "title": "Export-QR-Codes scannen",
+            "body": "Öffne in Tokn den Import, wähle Google Authenticator und scanne die QR-Codes nacheinander. Alle ausgewählten Konten werden auf einmal übernommen."
+          },
+          "s4": {
+            "title": "Prüfen und aufräumen",
+            "body": "Vergleiche ein paar Codes zwischen den Apps, erstell ein verschlüsseltes Tokn-Backup und entferne die Konten danach aus Google Authenticator."
+          }
+        },
+        "faq": {
+          "f1": {
+            "q": "Wie exportiere ich aus Google Authenticator?",
+            "a": "Menü öffnen, Konten übertragen antippen, dann Konten exportieren und die Konten auswählen. Google Authenticator zeigt QR-Codes, die andere Apps - auch Tokn - scannen können."
+          },
+          "f2": {
+            "q": "Funktionieren meine Logins nach dem Wechsel noch?",
+            "a": "Ja. Der Export überträgt dieselben Secrets, Tokn erzeugt also exakt dieselben Codes. Auf Seiten der Dienste ändert sich nichts, du musst dort nichts umstellen."
+          },
+          "f3": {
+            "q": "Brauche ich für Tokn ein Google-Konto?",
+            "a": "Nein. Tokn hat gar kein Konto und läuft ohne Google Play Services - die App gibt es neben Google Play auch auf F-Droid."
+          }
+        }
+      },
+      "twofas": {
+        "metaTitle": "Von 2FAS zu Tokn wechseln: Backup-Datei importieren",
+        "metaDescription": "2FAS-Backup exportieren und direkt in Tokn importieren. Deine 2FA-Token ziehen in Minuten in einen verschlüsselten Offline-Tresor um - ohne Cloud.",
+        "intro": "2FAS ist ein solider Open-Source-Authenticator, hängt beim Backup aber an Google Drive. Tokn liest 2FAS-Backup-Dateien direkt ein - der Wechsel in einen komplett offline gehaltenen Tresor dauert nur ein paar Minuten.",
+        "steps": {
+          "s1": {
+            "title": "2FAS-Backup exportieren",
+            "body": "Öffne in 2FAS die Einstellungen, dann Backup, und exportiere eine Backup-Datei auf dein Gerät. Setz ein Passwort, damit die Datei verschlüsselt ist."
+          },
+          "s2": {
+            "title": "Tokn installieren",
+            "body": "Hol dir Tokn aus Google Play oder von F-Droid. Es gibt kein Konto - Tresor-Passwort oder Fingerabdruck festlegen und los."
+          },
+          "s3": {
+            "title": "Datei in Tokn importieren",
+            "body": "Öffne in Tokn den Import, wähle 2FAS, such die Backup-Datei aus und gib ihr Passwort ein. Alle Token kommen in einem Rutsch rüber."
+          },
+          "s4": {
+            "title": "Prüfen und aufräumen",
+            "body": "Vergleiche ein paar Codes, erstell ein verschlüsseltes Tokn-Backup und entferne danach deine Konten aus 2FAS und lösche die Export-Datei."
+          }
+        },
+        "faq": {
+          "f1": {
+            "q": "Kann Tokn passwortgeschützte 2FAS-Backups lesen?",
+            "a": "Ja. Tokn importiert 2FAS-Backup-Dateien direkt - bei verschlüsselten gibst du einfach das Passwort ein, das du in 2FAS gesetzt hast."
+          },
+          "f2": {
+            "q": "Was gewinne ich gegenüber 2FAS?",
+            "a": "Ein komplett offline gedachtes Design ohne Cloud-Komponenten, verschlüsselten Sync übers lokale Netzwerk für den Handywechsel und Backups, die nie deine Kontrolle verlassen. Der vollständige Vergleich zeigt es Feature für Feature."
+          },
+          "f3": {
+            "q": "Überleben meine Kontonamen den Import?",
+            "a": "Ja, deine Token kommen mit Dienst- und Kontonamen an. Danach kannst du eigene Icons vergeben und alles in Gruppen sortieren."
+          }
+        }
+      },
+      "stratum": {
+        "metaTitle": "Von Stratum zu Tokn wechseln: Backup importieren",
+        "metaDescription": "Tokn importiert Backups von Stratum (ehemals Authenticator Pro) direkt. Exportieren, importieren, fertig - deine 2FA-Codes bleiben durchgehend offline und verschlüsselt.",
+        "intro": "Stratum - früher Authenticator Pro - und Tokn sind nah verwandt: Open Source, offline, verschlüsselt. Tokn liest Stratum-Backup-Dateien direkt ein, der Wechsel besteht also nur aus Export und Import.",
+        "steps": {
+          "s1": {
+            "title": "Stratum-Backup exportieren",
+            "body": "Öffne in Stratum die Einstellungen, dann Backup, und speichere eine verschlüsselte Backup-Datei auf deinem Gerät."
+          },
+          "s2": {
+            "title": "Tokn installieren",
+            "body": "Hol dir Tokn aus Google Play oder von F-Droid. Es gibt kein Konto - Tresor-Passwort oder Fingerabdruck festlegen und los."
+          },
+          "s3": {
+            "title": "Datei in Tokn importieren",
+            "body": "Öffne in Tokn den Import, wähle Stratum, such die Backup-Datei aus und gib ihr Passwort ein. Alle Token kommen in einem Rutsch rüber."
+          },
+          "s4": {
+            "title": "Prüfen und aufräumen",
+            "body": "Vergleiche ein paar Codes, erstell ein verschlüsseltes Tokn-Backup und lösche danach den Stratum-Tresor und die Export-Datei."
+          }
+        },
+        "faq": {
+          "f1": {
+            "q": "Kann Tokn verschlüsselte Stratum-Backups importieren?",
+            "a": "Ja. Tokn liest Stratum-Backup-Dateien direkt ein - beim Import gibst du das Passwort ein, das du in Stratum gesetzt hast."
+          },
+          "f2": {
+            "q": "Ist Stratum dieselbe App wie Authenticator Pro?",
+            "a": "Ja, Authenticator Pro wurde in Stratum umbenannt. Dieser Guide gilt so oder so: Backup-Datei exportieren und in Tokn importieren."
+          },
+          "f3": {
+            "q": "Was bietet Tokn gegenüber Stratum?",
+            "a": "Verschlüsselten Sync übers lokale Netzwerk für den Handywechsel - WLAN, Wi-Fi Direct oder animierter QR-Code - plus Material-You-Design und Gruppen mit Mehrfachzuordnung. Details im vollständigen Vergleich."
+          }
+        }
+      },
+      "authy": {
+        "metaTitle": "Authy-Export: So ziehen deine 2FA-Codes zu Tokn um",
+        "metaDescription": "Authy hat keinen offiziellen Export. So kommst du sauber raus: Jedes Konto einmal neu in Tokns verschlüsseltem Offline-Tresor einrichten - und nie wieder eingesperrt sein.",
+        "intro": "Authy bietet keinen Export deiner 2FA-Secrets - deine Token hängen an deiner Telefonnummer und Authys Cloud. Der Weg raus: jedes Konto einmal neu einrichten. Das kostet etwas Zeit, aber danach gehören deine Codes wirklich dir, in einem verschlüsselten Tresor mit Backups unter deiner Kontrolle.",
+        "steps": {
+          "s1": {
+            "title": "Konten auflisten",
+            "body": "Geh Authy durch und notiere jeden Dienst, den du damit nutzt. Lass Authy installiert und funktionsfähig, bis das letzte Konto umgezogen ist."
+          },
+          "s2": {
+            "title": "Tokn installieren",
+            "body": "Hol dir Tokn aus Google Play oder von F-Droid. Es gibt kein Konto - Tresor-Passwort oder Fingerabdruck festlegen und los."
+          },
+          "s3": {
+            "title": "Jedes Konto neu einrichten",
+            "body": "Öffne bei jedem Dienst die Sicherheitseinstellungen und wähle, die Authenticator-App zu wechseln oder neu einzurichten. Scanne den neuen QR-Code mit Tokn und bestätige den Code. Die meisten Dienste brauchen keine Minute."
+          },
+          "s4": {
+            "title": "Authy abschließen",
+            "body": "Sobald jedes Konto seine Codes in Tokn erzeugt, erstell ein verschlüsseltes Tokn-Backup und lösche dann dein Authy-Konto, damit deine Telefonnummer nicht länger daran hängt."
+          }
+        },
+        "faq": {
+          "f1": {
+            "q": "Kann ich meine Keys aus Authy exportieren?",
+            "a": "Offiziell nicht. Authy hat keine Export-Funktion, und inoffizielle Tricks hängen an veralteten Desktop-Apps und können jederzeit brechen. Jeden Dienst einmal neu einzurichten ist der zuverlässige Weg - und die letzte Migration, die du je so machen musst."
+          },
+          "f2": {
+            "q": "Wie lange dauert der Wechsel von Authy?",
+            "a": "Rechne mit etwa einer Minute pro Konto. Ein typischer Tresor mit 15 bis 20 Konten ist in unter einer halben Stunde durch."
+          },
+          "f3": {
+            "q": "Was passiert danach mit meinem Authy-Konto?",
+            "a": "Beantrage die Löschung in der Authy-App oder über den Twilio-Support, damit deine Telefonnummer freigegeben wird. Ab dann sind deine Backups verschlüsselte Dateien in deiner Hand statt einer Cloud an deiner SIM."
+          }
+        }
+      },
+      "microsoftAuth": {
+        "metaTitle": "Microsoft Authenticator Export: Codes zu Tokn umziehen",
+        "metaDescription": "Microsoft Authenticator kann 2FA-Konten nicht in andere Apps exportieren. Dieser Guide zeigt den sauberen Umzugsweg in Tokns verschlüsselten Offline-Tresor.",
+        "intro": "Microsoft Authenticator sichert in ein Microsoft-Konto, aber es gibt keinen Export, den andere Apps lesen können. Für den Wechsel richtest du jedes Drittanbieter-Konto einmal neu ein. Dein Microsoft-Arbeits- oder Schul-Login kann in Microsoft Authenticator bleiben, wenn es Push-Bestätigung nutzt.",
+        "steps": {
+          "s1": {
+            "title": "Bestandsaufnahme",
+            "body": "Geh Microsoft Authenticator durch und notiere jedes Drittanbieter-Konto. Lass die App installiert und funktionsfähig, bis das letzte umgezogen ist."
+          },
+          "s2": {
+            "title": "Tokn installieren",
+            "body": "Hol dir Tokn aus Google Play oder von F-Droid. Es gibt kein Konto - Tresor-Passwort oder Fingerabdruck festlegen und los."
+          },
+          "s3": {
+            "title": "Drittanbieter-Konten neu einrichten",
+            "body": "Öffne bei jedem Dienst die Sicherheitseinstellungen und wähle, die Authenticator-App zu wechseln oder neu einzurichten. Scanne den neuen QR-Code mit Tokn und bestätige den Code."
+          },
+          "s4": {
+            "title": "Microsoft-Logins entscheiden",
+            "body": "Microsoft-Konten unterstützen auch normale Authenticator-Codes, die Tokn beherrscht. Nur die Push-Bestätigung per Anmeldung genehmigen bleibt Microsofts App vorbehalten - behalte sie nur dafür oder stell das Konto auf normale Codes um. Danach ein verschlüsseltes Tokn-Backup erstellen."
+          }
+        },
+        "faq": {
+          "f1": {
+            "q": "Kann ich aus Microsoft Authenticator exportieren?",
+            "a": "Nein. Das Cloud-Backup lässt sich nur in Microsoft Authenticator selbst wiederherstellen; ein Exportformat für andere Apps gibt es nicht. Jedes Konto einmal neu einzurichten ist der Weg raus."
+          },
+          "f2": {
+            "q": "Kann Tokn Codes für mein Microsoft-Konto erzeugen?",
+            "a": "Ja. Microsoft-Konten unterstützen normales TOTP, das Tokn wie jedes andere Konto behandelt. Nur die Push-Aufforderungen zum Anmelden genehmigen sind exklusiv in Microsofts App."
+          },
+          "f3": {
+            "q": "Lohnt sich der einmalige Aufwand?",
+            "a": "Wenn dir Open Source, Unabhängigkeit von der Cloud und eigene Backups wichtig sind: ja. Du richtest einmal neu ein und bist nie wieder an die App eines Anbieters gebunden - Tokns Backups und Sync sind offene, verschlüsselte Formate."
           }
         }
       }

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { competitors } from "@/lib/site";
+import { competitors, guideSlug } from "@/lib/site";
 import { routing } from "@/i18n/routing";
 import { absoluteUrl } from "@/lib/meta";
 
@@ -12,6 +12,11 @@ const pages = [
     path: `/vs/${c.slug}`,
     changeFrequency: "monthly" as const,
     priority: 0.8,
+  })),
+  ...competitors.map((c) => ({
+    path: `/guides/${guideSlug(c)}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
   })),
 ];
 

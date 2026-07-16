@@ -1,6 +1,7 @@
 // import * as simpleIcons from "simple-icons";
 import { useTranslations } from "next-intl";
-import { importSources } from "@/lib/site";
+import { Link } from "@/i18n/navigation";
+import { importSources, competitors, guideSlug } from "@/lib/site";
 // import { BrandGlyph } from "./BrandGlyph";
 import { Screenshot } from "./Screenshot";
 import { Import } from "lucide-react";
@@ -13,6 +14,7 @@ import { Import } from "lucide-react";
 
 export function Switching() {
   const t = useTranslations("Switching");
+  const tGuides = useTranslations("Guides");
   return (
     <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
@@ -36,6 +38,19 @@ export function Switching() {
                 <span className="font-medium">{s.name}</span>
                 <span className="text-muted">{t(`sources.${s.id}`)}</span>
               </span>
+            ))}
+          </div>
+
+          <p className="mt-7 text-sm font-medium">{tGuides("switchingLead")}</p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {competitors.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/guides/${guideSlug(c)}`}
+                className="rounded-full border border-border px-3.5 py-2 text-sm text-muted transition hover:border-border-strong hover:bg-surface-2 hover:text-text"
+              >
+                {tGuides("title", { app: c.name })}
+              </Link>
             ))}
           </div>
         </div>

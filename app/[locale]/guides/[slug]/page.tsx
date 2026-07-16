@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ChevronDown, GitCompareArrows } from "lucide-react";
+import { ChevronDown, Import } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { BrandMark } from "@/components/BrandMark";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -10,17 +10,17 @@ import { Footer } from "@/components/Footer";
 import { CtaBand } from "@/components/CtaBand";
 import { Screenshot } from "@/components/Screenshot";
 import { StoreButtons } from "@/components/StoreButtons";
-import { VsTable } from "@/components/VsTable";
 import { site, competitors, guideSlug } from "@/lib/site";
 import { absoluteUrl, languageAlternates } from "@/lib/meta";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return competitors.map((c) => ({ slug: c.slug }));
+  return competitors.map((c) => ({ slug: guideSlug(c) }));
 }
 
-const faqIds = ["f1", "f2", "f3", "f4"] as const;
+const stepIds = ["s1", "s2", "s3", "s4"] as const;
+const faqIds = ["f1", "f2", "f3"] as const;
 
 export async function generateMetadata({
   params,
@@ -28,10 +28,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const competitor = competitors.find((c) => c.slug === slug);
+  const competitor = competitors.find((c) => guideSlug(c) === slug);
   if (!competitor) return {};
-  const t = await getTranslations({ locale, namespace: "Vs" });
-  const path = `/vs/${slug}`;
+  const t = await getTranslations({ locale, namespace: "Guides" });
+  const path = `/guides/${slug}`;
   return {
     title: { absolute: t(`apps.${competitor.key}.metaTitle`) },
     description: t(`apps.${competitor.key}.metaDescription`),
@@ -42,26 +42,25 @@ export async function generateMetadata({
   };
 }
 
-export default async function VsPage({
+export default async function GuidePage({
   params,
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const competitor = competitors.find((c) => c.slug === slug);
+  const competitor = competitors.find((c) => guideSlug(c) === slug);
   if (!competitor) notFound();
   setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: "Vs" });
-  const tGuides = await getTranslations({ locale, namespace: "Guides" });
+  const t = await getTranslations({ locale, namespace: "Guides" });
   const nav = await getTranslations({ locale, namespace: "Nav" });
-  const tHero = await getTranslations({ locale, namespace: "Hero" });
+  const tSwitching = await getTranslations({ locale, namespace: "Switching" });
 
   const app = (key: string) => t(`apps.${competitor.key}.${key}`);
   const title = t("title", { app: competitor.name });
   const home = absoluteUrl(locale, "/");
-  const here = absoluteUrl(locale, `/vs/${slug}`);
-  const others = competitors.filter((c) => c.slug !== slug);
+  const here = absoluteUrl(locale, `/guides/${slug}`);
+  const others = competitors.filter((c) => c.slug !== competitor.slug);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -84,6 +83,19 @@ export default async function VsPage({
         isPartOf: { "@id": `${site.url}/#website` },
         about: { "@id": `${site.url}/#app` },
         breadcrumb: { "@id": `${here}#breadcrumbs` },
+      },
+      {
+        "@type": "HowTo",
+        "@id": `${here}#howto`,
+        name: title,
+        description: app("intro"),
+        inLanguage: locale,
+        step: stepIds.map((id, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: app(`steps.${id}.title`),
+          text: app(`steps.${id}.body`),
+        })),
       },
       {
         "@type": "FAQPage",
@@ -127,10 +139,10 @@ export default async function VsPage({
         <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-14 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-20 lg:pt-20">
           <div className="text-center lg:text-left">
             <p className="flex items-center justify-center gap-2 font-medium text-sm uppercase tracking-widest text-primary lg:justify-start">
-              <GitCompareArrows className="h-4 w-4" /> {t("eyebrow")}
+              <Import className="h-4 w-4" /> {t("eyebrow")}
             </p>
             <h1 className="mt-4 text-balance text-4xl font-bold leading-[1.04] sm:text-5xl">
-              Tokn <span className="text-primary">{t("vsWord")}</span> {competitor.name}
+              {title}
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-pretty text-lg text-muted lg:mx-0">
               {app("intro")}
@@ -142,8 +154,8 @@ export default async function VsPage({
 
           <div className="hidden justify-center lg:flex lg:justify-end">
             <Screenshot
-              name="vault-home"
-              alt={tHero("screenshotAlt")}
+              name="import-source-picker"
+              alt={tSwitching("altPicker")}
               className="w-[300px]"
               priority
               maskEnd={85}
@@ -152,30 +164,29 @@ export default async function VsPage({
         </section>
 
         <section className="mx-auto max-w-3xl px-5 py-12 sm:px-8 sm:py-16">
-          <h2 className="text-balance text-3xl font-bold sm:text-4xl">{t("tableHeading")}</h2>
-          <div className="mt-8">
-            <VsTable competitor={competitor} />
-          </div>
-        </section>
+          <h2 className="text-balance text-3xl font-bold sm:text-4xl">{t("stepsHeading")}</h2>
+          <ol className="mt-8 space-y-6">
+            {stepIds.map((id, i) => (
+              <li key={id} className="flex gap-4">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-on-primary">
+                  {i + 1}
+                </span>
+                <div>
+                  <h3 className="font-semibold">{app(`steps.${id}.title`)}</h3>
+                  <p className="mt-1.5 text-pretty leading-relaxed text-muted">
+                    {app(`steps.${id}.body`)}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
 
-        <section className="mx-auto max-w-3xl px-5 py-12 sm:px-8 sm:py-16">
-          <h2 className="text-balance text-2xl font-bold sm:text-3xl">{t("toknHeading")}</h2>
-          <p className="mt-4 text-pretty text-lg leading-relaxed text-muted">{app("toknBetter")}</p>
-
-          <h2 className="mt-14 text-balance text-2xl font-bold sm:text-3xl">
-            {t("otherHeading", { app: competitor.name })}
-          </h2>
-          <p className="mt-4 text-pretty text-lg leading-relaxed text-muted">{app("otherBetter")}</p>
-
-          <h2 className="mt-14 text-balance text-2xl font-bold sm:text-3xl">{t("verdictHeading")}</h2>
-          <p className="mt-4 text-pretty text-lg leading-relaxed text-muted">{app("verdict")}</p>
-
-          <p className="mt-8">
+          <p className="mt-10">
             <Link
-              href={`/guides/${guideSlug(competitor)}`}
+              href={`/vs/${competitor.slug}`}
               className="font-medium text-primary underline-offset-4 transition hover:underline"
             >
-              {tGuides("vsGuideLink", { app: competitor.name })}
+              {t("compareLink", { app: competitor.name })}
             </Link>
           </p>
         </section>
@@ -206,7 +217,7 @@ export default async function VsPage({
             {others.map((c) => (
               <Link
                 key={c.slug}
-                href={`/vs/${c.slug}`}
+                href={`/guides/${guideSlug(c)}`}
                 className="rounded-full border border-border px-4 py-2 text-sm text-muted transition hover:border-border-strong hover:bg-surface-2 hover:text-text"
               >
                 {t("title", { app: c.name })}

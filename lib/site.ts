@@ -106,6 +106,11 @@ export const comparison: ComparisonRow[] = [
 
 export type CompetitorKey = Exclude<keyof ComparisonRow, "id" | "tokn">;
 export type Competitor = { slug: string; key: CompetitorKey; name: string };
+// Slug of the migration guide page for a competitor, under /guides/.
+export function guideSlug(c: Competitor): string {
+  return `switch-from-${c.slug}`;
+}
+
 export const competitors: Competitor[] = [
   { slug: "aegis", key: "aegis", name: "Aegis" },
   { slug: "google-authenticator", key: "googleAuth", name: "Google Authenticator" },
