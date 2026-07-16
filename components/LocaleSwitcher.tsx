@@ -6,6 +6,10 @@ import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
+function persistLocale(locale: string) {
+  document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`;
+}
+
 export function LocaleSwitcher({ className = "" }: { className?: string }) {
   const locale = useLocale();
   const pathname = usePathname();
@@ -50,6 +54,8 @@ export function LocaleSwitcher({ className = "" }: { className?: string }) {
   const select = (l: string) => {
     setOpen(false);
     if (l === locale) return;
+
+    persistLocale(l);
 
     const navigate = () =>
       startTransition(() => {
